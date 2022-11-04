@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css" media="all">
+     
+     *{
+       margin:0;
+       padding:0;
+       box-sizing: border-box;
+       font-family: Times New Roman;
+     }
+     
+     
+   .md{
+        width:100%;
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:#505050;
+     
+      }
+      .mcir{
+        background: white;
+height:43.5em;
+       width:43.5em;
+       border: 28px solid #ffde14;
+       border-radius: 50%;
+       display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 95px 50px 85px 25px;
+      }
+     .cir{
+       height:3em;
+       width:3em;
+       background: black;
+       border-radius: 50%;
+       display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+      .secd{
+        height:16em;
+    background: black;
+        width:.5em;
+        margin-top:-16em;
+        margin-left: -.76em;
+   border-radius: 50%;
+      transform-origin: bottom;
+      }
+   
+      .mind{
+        height:12em;
+    background: black;
+        width:1em;
+        margin-top:-11.4em;
+        margin-left:-1.1em;
+   border-radius: 50%;
+      transform-origin: bottom;
+      }
+      
+   .hrd{
+        height:9em;
+    background: black;
+        width:1.25em;
+        margin-top:-8.4em;
+        margin-left:-.45em;
+        
+   border-radius: 50%;
+      transform-origin: bottom;
+      }
+      .t12-6, .t3-9, .t11-5, .t10-4, .t1-7,
+      .t2-8{
+        position: absolute;
+       display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+        align-items: center;
+      
+        height: 13em;
+        font-size: 3em;
+        font-weight: 620;
+      }
+      .t12-6{
+        transform: rotate(0deg);
+      }
+      
+      .t1-7{
+        transform: rotate(30deg);
+      }
+      .t2-8{
+        transform: rotate(60deg);
+      }
+      .t3-9{
+        transform: rotate(90deg);
+     
+      }
+      .t10-4{
+transform: rotate(120deg);
+      }
+      .t11-5{
+        transform: rotate(150deg);
+      }
+      
+      /* rotate fixing */
+      
+    .t1-7 p {
+        transform: rotate(-30deg);
+    }
+    .t2-8 p{
+      
+        transform: rotate(-60deg);
+        
+      }
+      .t3-9 p{
+        transform: rotate(-90deg);
+     
+      }
+      .t10-4 p{
+transform: rotate(-120deg);
+      }
+      .t11-5 p{
+        transform: rotate(-150deg);
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+
+    <div class="md">
+  
+      <div class="mcir">
+  <div class="t12-6">
+<p>12</p>
+<p>6</p>
+  </div>
+  <div class="t1-7">
+<p>1</p>
+<p>7</p>
+  </div>
+  <div class="t2-8">
+<p>2</p>
+<p>8</p>
+  </div>
+  <div class="t3-9">
+<p>3</p>
+<p>9</p>
+  </div>
+  <div class="t10-4">
+<p>4</p>
+<p>10</p>
+  </div>
+  <div class="t11-5">
+<p>5</p>
+<p>11</p>
+  </div>
+  
+  
+  
+ <div class="cir">
+  <div class="hrd">
+     
+   </div>
+   <div class="mind">
+     
+   </div>
+  <div class="secd">
+      
+    </div>
+      </div>
+      </div>
+     
+
+    </div>
+  
+    
+  </body>
+  
+  <script type="text/javascript" charset="utf-8">
+
+
+  const degh=0.0833333333333;
+
+let sum=0;
+
+setInterval(function (){
+var date=new Date();
+
+
+
+//document.querySelector(".hrd").style.background=`blue`;
+    document.querySelector(".secd").style.transform=`rotate(${date.getSeconds()*6}deg)`;
+    
+  document.querySelector(".mind").style.transform=`rotate(${(date.getMinutes()*6)}deg)`;
+
+  document.querySelector(".hrd").style.transform=`rotate(${(30*date.getHours())+(0.5*date.getMinutes())}deg)`;
+  
+// console.log((30*date.getHours())+(0.5*date.getMinutes()));
+    },1000);</script>
+    
+    </html>

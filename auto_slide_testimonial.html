@@ -1,0 +1,248 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style type="text/css">
+
+*{
+margin:0;
+padding:0;
+
+}
+#bd{
+
+background-image:url("/storage/emulated/0/Download/questionBcg.jpeg");
+
+background-repeat:no-repeat;
+}
+
+#md{
+
+position:relative;
+background-color:rgb(0,0,0,0.5);
+height:670px;
+width:autopx;
+
+
+
+}
+#d1{
+width:300px;
+height:400px;
+top:200px;
+left:30px;
+border:0.5px solid white;
+border-radius:7px;
+position:relative;
+
+
+}
+#dp{
+width:80px;
+height:80px;
+left:105px;
+top:-40px;
+background-color:black;
+border:1px solid white;
+border-radius:50%;
+position:relative;
+background-image:url("/storage/emulated/0/Download/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg");
+background-size:80px 80px;
+background-repeat:no-repeat;
+}
+
+
+#p1{
+position:absolute;
+color:#f15025;
+top:50px;
+font-family:"Sofia",serif;
+left:150px;
+font-size:23px;
+}
+#p2{
+position:absolute;
+color:white;
+font-family:"Sofia",serif;
+left:80px;
+top:80px;
+font-size:38px;
+
+}
+
+#cn{
+position:absolute;
+color:white;
+font-family:"Sofia",serif;
+left:100px;
+top:80px;
+font-size:24px;
+
+}
+
+
+#rimg{
+position:absolute;
+left:99px;
+height:100px;
+width:100px;
+
+
+}
+#qimg{
+
+position:absolute;
+left:129px;
+top:330px;
+height:40px;
+width:40px;
+
+
+
+}
+
+
+#rw{
+position:absolute;
+color:white;
+left:15px;
+top:170px;
+font-size:16px;
+
+font-family:"Sofia",serif;
+
+}
+
+#btn1{
+border:3px solid white;
+position:absolute;
+top:392px;
+left:1px;
+background-color:rgb(0,0,0,0);
+font-size:15px;
+height:45px;
+width:30px;
+border-radius:5px;
+
+color:white;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+
+#btn1:hover{
+background-color:#ffffff;
+color:black;
+border:3px solid #f15025;;
+animation:butn1 0.1s;
+}
+
+
+
+
+#btn2{
+border:3px solid white;
+position:absolute;
+top:392px;
+right:1px;
+background-color:rgb(0,0,0);
+font-size:15px;
+height:45px;
+border-radius:5px;
+width:30px;
+color:white;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+
+#btn2:hover{
+background-color:#ffffff;
+color:black;
+border:3px solid #f15025;;
+}
+</style>
+</head>
+<body id="bd">
+
+
+
+<div id="md">
+
+<p id="p1">Client</p>
+<p id="p2">Testimonials</p></center>
+<div id="d1">
+
+
+<div id="dp"></div>
+</center>
+
+<p id="cn">Leticia X</p>
+
+
+<p id="rw">Thank You! I have gotten at least 50 times the value from Car. Car is worth much more than I paid. Thank You!</p>
+
+<img id="rimg" src="/storage/emulated/0/Download/rating.png">
+
+
+<img id="qimg" src="/storage/emulated/0/Download/left-quote.png">
+
+</div>
+
+</div>
+
+
+
+<!--<button id="btn1" onclick="func2()"><</button>
+
+<button id="btn2" onclick="func1()">></button>
+
+-->
+
+
+</div>
+
+</body>
+<script type="text/javascript">
+var x=-1;
+var y=0;
+let path="/storage/emulated/0/Download/";
+//const arr=["left-quote.png","deep_nn.png","CPython-will-hit-the-market-in-October-with-Major-Advantages-768x427.jpg","background.jpg","mainBcg.jpeg"];
+
+
+const arr=["lau-keith-dcZsxUAAJXs-unsplash.jpg","albert-dera-ILip77SbmOE-unsplash.jpg","juan-goyache-xCUlJMWLGoU-unsplash.jpg","allef-vinicius-C_1jjFJioWg-unsplash.jpg",
+"joseph-gonzalez-iFgRcqHznqg-unsplash.jpg"]
+//file:///storage/emulated/0/Download/lau-keith-dcZsxUAAJXs-unsplash.jpg
+/*
+file:///storage/emulated/0/Download/albert-dera-ILip77SbmOE-unsplash.jpg
+file:///storage/emulated/0/Download/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg
+
+
+*/
+
+const txt=[["I'd be lost without Car. Car did exactly what you said it does. I like Car more and more each day because it makes my life a lot easier. I'm good to go.","Aimy Kol"],["We've used Car for the last five years.","Merwin Z"],["Car is both attractive and highly adaptable. I will recommend you to my colleagues. Very easy to use. I wish I would have thought of it first.","Bentley K"],["I am so pleased with this product.","Emmery P"],["I would like to personally thank you for your outstanding product. I will recommend you to my colleagues.","Walt I"],["Thank You! I have gotten at least 50 times the value from Car. Car is worth much more than I paid. Thank You!"," Leticia X"]]
+
+//const txt=["hi","bye","ho","ko","kol"]
+
+function func1(){
+
+if(x>(arr.length-2)){x=-1;}
+x+=1;
+document.getElementById("dp").style.backgroundImage=`url(${path+arr[x]})`;
+document.getElementById("rw").innerHTML=txt[x][0];
+document.getElementById("cn").innerHTML=txt[x][1];
+}
+
+function func2(){
+if(x<1){x=arr.length;}
+x-=1;
+document.getElementById("dp").style.backgroundImage=`url(${path+arr[x]})`;
+document.getElementById("rw").innerHTML=txt[x][0];
+document.getElementById("cn").innerHTML=txt[x][1];
+}
+
+setInterval(func1,2000);
+
+</script>
+</html>
+
+

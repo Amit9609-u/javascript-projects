@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+    
+body{
+
+ user-select:none;
+
+}
+
+#warn{
+border-radius:6px;
+width:85%;
+height:auto;
+margin:0.7em auto;
+background-color:lightpink;
+display:flex;
+justify-content:center;
+}
+#warn p{
+
+
+
+color:#290000;
+
+}
+
+
+
+#p1{
+   text-align:center;
+   
+   color:black;
+   text-transform:capitalize;
+   font-size:1.8em;
+
+}
+
+
+
+#inpt{
+font-size:1em;
+padding:.5em;
+border:1px solid green;
+border-radius:5px 0  0 5px;
+
+outline-color:#00a0f6;
+
+}
+
+
+#abtn{
+border:1px solid green;
+border-radius:0  5px 5px 0;
+font-size:1em;
+background-color:white;
+color:green;
+
+
+}
+#div1{
+   display:flex;
+   justify-content:center;
+   flex-wrap:wrap;
+   
+ 
+
+
+
+
+}
+
+
+.inrdiv{
+border-radius:6px;
+width:88.58%;
+height:auto;
+margin:0.7em 0.75em;
+background-color:#eee;
+display:flex;
+justify-content:space-between;
+padding:0.5em;
+
+
+}
+.par{
+font-size:1.2em;
+font-weight:910px;
+
+width:65%;
+height:auto;
+overflow-wrap: break-word;
+
+}
+.grpbtndiv{
+
+display:flex;
+justify-content:space-evenly;
+flex-wrap:wrap;
+
+}
+
+.inrdiv button{
+background-color:#eee;
+border-radius:56px;
+font-size:20px;
+border:2px;
+padding:.2;
+
+}
+
+.clrbtn{
+
+    display:block;
+    margin:2em auto;
+    border:1px solid green;
+    border-radius:5px;
+    font-size:1em;
+    background-color:white;
+    color:green;
+    height:2.2em;
+    width:6.6em;
+    
+}
+
+@media screen and (max-width:480px){
+ #inpt{
+ border-radius:5px 0 0 5px;
+ 
+ }
+ #abtn{
+   
+ 
+ padding:.5em;
+ border-radius:0 5px 5px 0;
+ 
+ }
+
+}
+</style>
+
+
+</head>
+<body id="bd">
+<div id="warn"></div>
+
+<p id="p1">goals tracker</p>
+<div id="div1">
+<input id="inpt" placeholder="Enter Goal...">
+
+<button id="abtn" class="addbtn">Add item</button>
+
+
+
+</div>
+<div id="outrdiv"></div>
+
+
+
+<br>
+
+
+<button id="clr" class="clrbtn">Clear Items</button>
+</body>
+
+<script type="text/javascript">
+
+var coun=0;
+var dict={};
+const inptb=document.getElementById("inpt");
+function data(count,inptval,isf){
+
+let counter=count;
+let m=document.createElement("div")
+m.setAttribute("id",`inrdiv${counter}`);
+m.className="inrdiv";
+document.getElementById("outrdiv").appendChild(m);
+
+let par=document.createElement("p");
+par.id=`par${counter}`;
+par.className="par";
+par.innerHTML=inptval;
+
+inptb.value="";
+document.getElementById(`inrdiv${counter}`).appendChild(par);
+
+//----- div for group of buttons------
+
+let grpbtn=document.createElement("div")
+grpbtn.setAttribute("id",`grpbtn${counter}`);
+grpbtn.className="grpbtndiv";
+document.getElementById(`inrdiv${counter}`).appendChild(grpbtn);
+
+
+
+
+
+let k=document.createElement("button");
+k.id=`${counter}f`;
+k.className="far fa-check-circle";
+k.style.color="#42ba96";
+var v=1;
+
+
+
+k.onclick=function(){
+
+let pv=document.getElementById(`par${counter}`)
+
+
+
+
+if(v==1){
+
+let gh=dict[`pgrph${counter}`]["pr"];
+dict[`pgrph${counter}`]={"pr": gh,"isFinished":1};
+localStorage.setItem("paragraphs", JSON.stringify(dict))
+
+
+pv.innerHTML=String(pv.textContent).strike();
+pv.style.color="#909090";
+document.getElementById(`${counter}f`).style.color="#AFE1AF";
+v=0;
+
+
+
+}else{
+
+let gh=dict[`pgrph${counter}`]["pr"];
+dict[`pgrph${counter}`]={"pr": gh,"isFinished":0};
+localStorage.setItem("paragraphs", JSON.stringify(dict))
+
+pv.innerHTML=pv.textContent;
+pv.style.color="#000000";
+v=1;
+
+document.getElementById(`${counter}f`).style.color="#42ba96";
+
+}
+console.log(v);
+
+}
+//k.innerHTML="Finish";//"✅"
+
+document.getElementById(`grpbtn${counter}`).appendChild(k);
+
+
+
+let e=document.createElement("button");
+e.id=`${counter}e`;
+e.className="far fa-edit"
+e.style.color="#1dddff"
+e.onclick=function(){
+inptb.value=document.getElementById(`par${counter}`).textContent;
+delete dict[`pgrph${counter}`];
+
+localStorage.setItem("paragraphs", JSON.stringify(dict))
+
+
+let ele = document.getElementById(`inrdiv${counter}`);
+ele.parentNode.removeChild(ele);
+
+
+}
+//e.innerHTML="Edit";//"✅"
+
+document.getElementById(`grpbtn${counter}`).appendChild(e);
+
+
+
+let c=document.createElement("button");
+c.id=`${counter}c`;
+c.className="far fa-times-circle";
+c.style.color="red";
+c.onclick=function(){
+
+delete dict[`pgrph${counter}`];
+
+localStorage.setItem("paragraphs", JSON.stringify(dict))
+
+
+let ele = document.getElementById(`inrdiv${counter}`);
+
+ele.parentNode.removeChild(ele)
+
+
+}
+
+
+
+//c.innerHTML="Cancel";//"✅"
+
+document.getElementById(`grpbtn${counter}`).appendChild(c);
+
+if(isf==1){
+let pv=document.getElementById(`par${counter}`);
+
+pv.innerHTML=String(pv.textContent).strike();
+pv.style.color="#909090";
+document.getElementById(`${counter}f`).style.color="#AFE1AF";
+v=0;
+
+}
+
+
+
+}
+
+document.getElementById("abtn").addEventListener("click",()=>{
+
+
+
+if(inptb.value){
+let inptvalue=document.getElementById("inpt").value;
+
+
+coun++;
+
+//dict[`pgrph${coun}`]=inptvalue;
+dict[`pgrph${coun}`]={"pr": inptvalue,"isFinished":0};
+
+localStorage.setItem("paragraphs", JSON.stringify(dict))
+
+data(coun,inptvalue);
+
+console.log(Object.entries(dict))
+
+}
+else{
+var w=document.getElementById("warn");
+let msg=document.createElement("p");
+msg.id="msgid";
+msg.innerHTML="Please Enter Valid Value";
+
+w.appendChild(msg);
+
+
+setTimeout(()=>{
+
+let msgd=document.getElementById("msgid");
+
+msgd.parentNode.removeChild(msgd);
+
+},3000);
+
+}
+});
+
+
+document.getElementById("clr").addEventListener("click",()=>{
+
+let d=document.getElementById("outrdiv")
+
+dict={};
+
+localStorage.setItem("paragraphs", JSON.stringify(dict))
+
+
+
+
+while(d.hasChildNodes()){
+
+d.removeChild(d.firstChild);
+
+}
+
+});
+
+
+
+
+gi=JSON.parse(localStorage.getItem("paragraphs"));
+
+if(Object.keys(gi).length!=0){
+
+
+
+for(z of Object.entries(gi)){
+
+console.log(z[0]+": "+Object.entries(z[1]));
+coun++;
+
+dict[`pgrph${coun}`]={"pr":z[1]["pr"],"isFinished":z[1]["isFinished"]};
+
+data(coun,z[1]["pr"],z[1]["isFinished"]);
+}
+
+console.log(coun);
+}
+
+
+</script>
+
+
+
+</html>

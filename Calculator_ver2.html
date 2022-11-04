@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@420&display=swap" rel="stylesheet">
+<style type="text/css">
+
+body{
+user-select:none;
+font-family: Quicksand, sans-serif;
+box-sizing: border-box;
+background: black;
+}
+
+#md{
+height:35.5em;
+width:98%;
+margin:5% 1%;
+
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+
+}
+input{
+border-top: 0;
+border-left: 0;
+border-right: 0;
+border-bottom .1px solid black;
+text-align: right;
+caret-color:#ff9900;
+margin:5px 5px;
+width:95%;
+height:15%;
+font-size:3.5em;
+outline:none;
+transition:all .5s ease-in-out;
+background-color:black;
+color:white;
+font-family: Quicksand, sans-serif;
+}
+.history{
+  margin-top:3.5em;
+  margin-left: .2em;
+  font-size: 1.7em;
+  font-weight:333;
+  opacity:0.5;
+  
+}
+.history i{
+  color: #FF9900;
+transition:all .7s ease-in-out;
+
+}
+.hist-dv .he{
+margin-top:-.3em;
+width:13.3em;
+height:3.5em;
+
+margin-right: 1.2em;
+margin-left:1.2em;
+border-bottom: .1px solid black;
+}
+.he{
+  text-align: right;
+ 
+ border-bottom: .5px solid black;
+}
+.he p:nth-child(1){
+  font-size: 1em;
+color:#959595;
+font-weight: 558;
+}
+.he p:nth-child(2){
+  margin-top:-.7em;
+  font-size:1.2em;
+  color: white;
+}
+
+.hs{
+  position:absolute;
+  top:16em;
+  left:1em;
+  width:0px;
+  height:57vh;
+  background:#282828;
+  transition:.2s linear;
+  border-radius: 17px;
+  overflow: hidden;
+  
+
+}
+.hist-dv{
+  width:100%;
+  
+  max-height:89%;
+  overflow:auto;
+  background:#282828;
+}
+
+
+.hc{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  background: #454545;
+  display: none;
+ font-weight: 665;
+  justify-content: center;
+  align-items: center;
+  height: 2.5em;
+}
+.hc span{
+  color:#FF9900;
+}
+
+#md div{
+
+margin-top: 0em;
+display:flex;
+flex-direction:row;
+flex-wrap:wrap;
+justify-content:flex-end;
+margin:1.5em 0 0 0;
+padding:0;
+
+}
+#md div button{
+
+color:white;
+background-color:#191919;
+
+
+width:23.3%;
+height:68px;
+margin:0.85%;
+font-size:32px;
+padding-left:.78em ;
+padding-right:0.80em;
+padding-bottom:1.2em;
+padding-top:0.35em;
+border-radius:17px;
+border:1px solid black;
+font-family: Quicksand, sans-serif;
+
+}
+
+.spo{
+
+background-color:#282828 !important;
+
+
+}
+
+.clear_btn{
+
+color:#FF9900 !important;
+
+padding-left:.55em !important;
+padding-top:0.45em !important;
+font-size:30px !important;
+}
+
+.back_btn{
+padding-left:0.7em !important;
+
+
+
+}
+
+.eql_btn{
+background-color:#FF9900 !important;
+
+}
+
+@media screen and (min-width:720px){
+  .hs{
+ top:18.3em;
+  left:1em;
+  width:0;
+  height:22.2vh;
+  }
+  
+  
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="md">
+
+<input  type="text" autofocus />
+<section class="history">
+<i class="fa fa-history" ></i>
+</section>
+<div>
+<button class="spo clear_btn">AC</button>
+
+
+
+<button class="clear_btn back_btn spo">B</button>
+
+
+
+<button class="spo">.</button>
+
+<button class="spo">/</button>
+<button>7</button>
+
+<button>8</button>
+<button>9</button>
+
+<button class="spo" >x</button>
+
+
+
+ <button>4</button>
+
+
+<button>5</button>
+<button>6</button>
+
+
+
+<button class="spo">+</button>
+<button>1</button>
+<button>2</button>
+<button>3</button>
+
+
+
+<button class="spo">-</button>
+
+<button >00</button>
+<button>0</button>
+
+<button class="spo eql_btn">=</button>
+
+
+</div>
+
+
+
+</div>
+
+<div class="hs">
+ <div class="hist-dv">
+   
+ </div>
+ <div class="hc">
+  <span> Clear history</span>
+ </div>
+</div>
+
+<script type="text/javascript">
+
+setTimeout(()=>{
+  
+  document.querySelector("input").style.borderBottom="0";
+  //document.querySelector("input").focus();
+  
+},3000);
+
+document.querySelector(".history").style.opacity=".5";
+var bi;
+const oprations_lst=[]
+const d={}
+var fv="";
+var sfv="";
+var val=1;
+//document.querySelector(".history").onclick=show_history
+var val=1;
+function show_history(){
+//console.log(document.querySelector(".hist-dv").children)
+  
+    console.log("hi")
+    document.querySelector(".hc").style.display="flex";
+    
+  document.querySelector(".hs").style.width="15.5em";
+    
+document.querySelector(".history").style.opacity="1";
+document.querySelector(".history").onclick=hide_history;
+document.querySelector(".history").innerHTML="<i class='fa fa-reply'></i>"
+
+  
+  /*
+  else{
+document.querySelector(".hs").style.width="0";
+val=1;
+    
+document.querySelector(".hc").style.display="none";
+  }*/
+}
+function hide_history(){
+document.querySelector(".hs").style.width="0";
+document.querySelector(".hc").style.display="none";
+document.querySelector(".history").onclick=show_history;
+
+document.querySelector(".history").innerHTML="<i class='fa fa-history'></i>"
+
+}
+document.querySelector(".hc").onclick=function(){
+  alert("History will be cleared.")
+console.log(document.querySelector(".hist-dv").children)
+  
+  document.querySelector(".hist-dv").innerHTML="";
+document.querySelector(".hs").style.width="0";
+    
+document.querySelector(".hc").style.display="none";
+  val=1;
+  
+  
+  if(document.querySelector(".hist-dv").children.length<1){
+document.querySelector(".history").innerHTML="<i class='fa fa-history'></i>"
+    document.querySelector("i").style.opacity=".5";
+    document.querySelector(".history").onclick=null;
+  }
+}
+//input box
+var inpt=document.getElementsByTagName("input")[0];
+
+
+//button List
+btn=document.getElementsByTagName("button")
+
+/* Creating dictionary of button
+and corresponding button entity 
+intead of uisng id */
+
+
+for(x of btn){
+
+d[x.textContent]=x;
+ }
+ 
+ 
+
+//Main for loop for accesing button textValue
+for(symb of btn){
+
+//assigning textValue to sgn variable
+let sgn=symb.textContent;
+
+/*don't add event to ' = ' and Clear button
+  skip them 
+  we will add event in seprate code
+*/
+if(sgn=="=" || sgn=="AC" || sgn=="B" || sgn=="00"){
+       continue
+    }
+
+//adding Click event to button by for loop
+
+d[sgn].addEventListener("click",()=>{
+
+oprations_lst.push(sgn);
+
+fv=(fv+sgn).replace("*","x");
+
+let temp=fv.slice(-2,-1);
+
+
+if(isNaN(oprations_lst.slice(-1))==true && (isNaN(oprations_lst.slice(-2,-1))==true) && oprations_lst.length>2){
+//console.log("Before",fv)
+
+
+
+
+//let tfv=[...fv].reverse().join("").replace(fv.slice(-2,-1),"");
+
+//fv=[...tfv].reverse().join("")
+
+let ti=fv.lastIndexOf(fv.slice(-2,-1));
+fv=fv.slice(0,ti)+fv.slice(ti+1);
+
+
+//console.log("After",fv)	
+
+ }
+
+
+inpt.value=fv;
+
+
+});
+
+
+
+
+
+//adding click event to Equal Button
+d["="].addEventListener("click",()=>{
+
+  console.log(fv)
+let result;
+try{
+if((fv.indexOf("+")>-1 || fv.indexOf("-")>-1 || fv.indexOf("x")>-1 || fv.indexOf("/")>-1) && fv.length>=3){
+document.querySelector(".history").style.opacity="1";
+document.querySelector(".history i").style.opacity="1";
+  let exp=String(fv).replace(/x/g,"*");
+  
+result=eval(exp);//oprations_lst.join("");
+document.querySelector(".hist-dv").insertAdjacentHTML("beforeend",`
+
+<div class=he>
+<p>${exp}</p>
+<p>= ${result}</p>
+</div>
+`);
+
+document.querySelector(".history").onclick=show_history;
+//document.querySelector(".").style.opacity="1";
+//lst cleaning
+oprations_lst.length=0
+
+inpt.value=result;
+
+fv=result;
+
+oprations_lst.push(result);
+}
+}
+catch(e){
+  
+}
+});
+//adding click event to All Clear Button
+d["AC"].addEventListener("click",()=>{
+
+//lst cleaning
+oprations_lst.length=0
+
+//input cleaning
+inpt.value="";
+fv="";
+
+});
+
+//Main 'for' loop ends here 
+}
+
+
+
+
+
+
+d["00"].addEventListener("click",()=>{
+
+oprations_lst.push("00");
+
+fv=(fv+"00").replace("*","x");
+
+let temp=fv.slice(-2,-1);
+
+
+if(isNaN(oprations_lst.slice(-1))==true && (isNaN(oprations_lst.slice(-2,-1))==true) && oprations_lst.length>2){
+//console.log("Before",fv)
+
+
+
+
+//let tfv=[...fv].reverse().join("").replace(fv.slice(-2,-1),"");
+
+//fv=[...tfv].reverse().join("")
+
+let ti=fv.lastIndexOf(fv.slice(-2,-1));
+fv=fv.slice(0,ti)+fv.slice(ti+1);
+
+
+//console.log("After",fv)	
+
+ }
+
+console.log(fv)
+inpt.value=fv;
+
+
+});
+
+
+d["B"].addEventListener("click",()=>{
+
+bi=fv.length;
+bi--;
+if(bi<0){
+bi=0;
+}
+
+fv=fv.slice(0,bi);
+
+inpt.value=fv;
+
+
+});
+
+
+
+
+</script>
+</body>
+</html>
+

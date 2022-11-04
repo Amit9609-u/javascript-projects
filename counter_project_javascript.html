@@ -1,0 +1,191 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+
+*{
+margin:0;
+padding:0;
+
+}
+#bd{
+
+background-image:url("/storage/emulated/0/Download/mainBcg.jpeg");
+
+}
+#d1{
+background-color:#ff6857;
+width:300px;
+min-height:400px;
+top:100px;
+left:30px;
+border:1.2px solid white;
+border-radius:7px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1);
+position:relative;
+background-image:url("/storage/emulated/0/Download/mainBcg.jpeg");
+}
+#p1{
+ 
+ position:absolute;
+ top:30px;
+ left:80px;
+ font-size:30px ;
+ 
+ color:white;
+ 
+  
+
+}
+
+
+
+#btn1{
+
+position:absolute;
+top:260px;
+left:23px;
+background-color:rgb(0,0,0,0);
+font-size:15px;
+height:45px;
+border:none;
+border-radius:5px;
+width:250px;
+color:white;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+
+
+
+#btn2{
+border:none;
+position:absolute;
+top:330px;
+left:23px;
+background-color:rgb(0,0,0,0);
+font-size:15px;
+height:45px;
+
+
+border-radius:5px;
+width:250px;
+color:white;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+
+#p2{
+
+position:absolute;
+ top:90px;
+ left:115px;
+ font-size:120px;
+ color:black;
+ 
+
+}
+#p3{
+
+position:absolute;
+ top:300px;
+ left:90px;
+ font-size:25px;
+ color:white;
+
+}
+
+</style>
+</head>
+<body id="bd">
+
+<div id="d1">
+
+<p id="p1">
+
+COUNTER
+
+</p>
+
+
+
+
+<p id="p2">0</p>
+
+<button id="btn1" onclick="func1()">LOWER COUNT</button>
+
+<button id="btn2" onclick="func2()">ADD COUNT</button>
+
+
+
+
+</div>
+
+</body>
+<script type="text/javascript">
+var x=0;
+function func1(){
+x-=1;
+if(x==0){
+document.getElementById("p2").style.left="115px";
+document.getElementById("p2").style.color="black";
+
+}
+else if(x<0 && x>-10){
+document.getElementById("p2").style.color="red";
+document.getElementById("p2").style.left="90px";
+}
+else if(x<-9){
+document.getElementById("p2").style.left="60px";
+document.getElementById("p2").style.color="red";
+}
+else if(x>9 ){
+document.getElementById("p2").style.left="70px";
+document.getElementById("p2").style.color="green";
+}
+else{
+document.getElementById("p2").style.left="115px";
+document.getElementById("p2").style.color="green";
+}
+
+document.getElementById("p2").innerHTML=x;
+
+}
+
+function func2(){
+
+x+=1;
+if(x==0){
+document.getElementById("p2").style.left="115px";
+document.getElementById("p2").style.color="black";
+}
+else if(x>-1 && x<10){
+document.getElementById("p2").style.left="115px";
+document.getElementById("p2").style.color="green";
+}
+else if(x>9){
+document.getElementById("p2").style.left="70px";
+document.getElementById("p2").style.color="green";
+}
+
+
+else{
+document.getElementById("p2").style.left="90px";
+document.getElementById("p2").style.color="red";
+}
+
+
+document.getElementById("p2").innerHTML=x;
+
+
+
+
+}
+//setInterval(func2,1000);
+
+</script>
+</html>
+
+
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+
+<style type="text/css">
+*{
+
+margin:0;
+padding:0;
+}
+#bd{
+background-color:#b09e99;
+}
+
+#imag{
+
+width:50px;
+height:59px;
+top:120px;
+left:7px;
+background-repeat:no-repeat;
+background-size:50px 50px;
+position:absolute;
+background-image:url("/storage/emulated/0/Download/left-quote.png");
+
+}
+
+#d1{
+position:relative;
+top:55px;
+left:0px;
+background-color:#E4D489;
+height:500px;
+width:340px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+border:10px;
+}
+
+
+#p1{
+
+font-size:30px;
+font-family:Courgette,sans-serif;
+position :absolute;
+float :left;
+color:#ffffff;
+top:130px;
+left:60px;
+}
+#p2{
+font-family:Courgette,sans-serif;
+position:absolute;
+top:440px;
+
+color:#64b6ac;
+font-size:20px;
+right:20px;
+
+}
+#b1{
+position:absolute;
+background:#64b6ac;
+height:60px;
+width:200px;
+top:50px;
+left:70px;
+font-size:15px ;
+padding-top:15px;
+padding-right:10px;
+padding-left:10px;
+padding-bottom:18px;
+color:#ffffff;
+border-radius:5px;
+border:4px solid #BBC4C2;
+user-select:none;
+}
+
+
+</style>
+<body id="bd">
+<div id="d1" >
+
+<div id="imag"></div>
+<p id="p1">The price of anything is the amount of life you exchange for it. 
+
+</p>
+<p id="p2">
+David Thoreau
+
+</p>
+<button type="button" onclick="func()" id ="b1" > 
+Generate Quote
+</button> 
+</div>
+
+</body>
+<script>
+
+const abc="ABCDEF";
+const m=[0,1,2,3,4,5,6,7,8,9,...abc];
+
+function func(){
+
+
+
+const lst=[["The price of anything is the amount of life you exchange for it.","David Thoreau"],
+["God save me from my friends. I can protect myself from my enemies.","Claude Louis Hector De Villars"],
+["Humor is richly rewarding to the person who employs it. It has some value in gaining and holding attention. But it has no persuasive value at all","John Kenneth Galbraith"],
+["Life is like a landscape. You live in the midst of it but can describe it only from the vantage point of distance.",
+"Charles Lindbergh"],
+["Life is too short and sweet to be spent by cribbing and complaining about things. Here are some random quotes about the most wonderful gift that we've got","Life"],
+["A critic is someone who never actually goes to the battle, yet who afterwards comes out shooting the wounded.","Tyne Daly"]];
+let cc="#"
+for(let i=0;i<6;i++){
+cc=cc+String(m[Math.floor(Math.random()*m.length)]);
+}
+
+const indx=Math.floor(Math.random()*lst.length);
+//document.getElementById("d1").style.backgroundColor=cc;
+document.getElementById("p1").innerHTML=lst[indx][0];
+//navigator.clipboard.writeText(cc);
+document.getElementById("p2").innerHTML=lst[indx][1]; 
+
+//setTimeout(()=>document.getElementById("b1").innerHTML='Click Me!',1000);
+
+
+}
+</script>
+</html>

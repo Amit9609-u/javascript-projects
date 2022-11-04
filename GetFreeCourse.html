@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+ <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+  </head>
+  <style type="text/css" media="all">
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+ 
+  }
+    .mc{
+      width: 100%;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 7em;
+   
+    }
+    p{
+      font-size: 1.7em;
+    }
+    .con1{
+      width: 85%;
+   
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 1.2em;
+    }
+    #prs{
+      width:100%;
+      margin-top: -.5em;
+      margin-bottom: -.25em;
+      background:rgba(124,201,136,.3);
+      text-align: center;
+      border-radius: 4px;
+      font-size: 1em;
+      padding: 1em;
+      color: rgb(70,104,65);
+     
+    }
+    .con1 input{
+     font-size: 1.1em;
+      width:100%;
+      border:3px solid rgb(141,103,103);
+      padding:.4em;
+      border-radius: 2px;
+text-transform: capitalize;
+    }
+    
+input[type="text"]{
+  transition: .2s;
+}
+ input[type="text"]:focus{
+outline:4px solid #84cdf5;
+border:3px solid #bbe6e9;
+}
+  input[type="button"]{
+border:3px solid rgb(141,103,103);
+      margin-top:.3em;
+      padding: .6em;
+     color:rgb(141,103,103);
+     transition:.9s;
+     background:white;
+     font-size: 1em;
+     opacity: .3;
+     
+  }
+input[type="button"]:hover{
+  color: white;
+  background:rgb(141,103,103);
+ 
+}
+ #load{
+    width:55%;
+    height:55%;
+    display:none;
+    margin-top: 3em;
+    margin-bottom: -2.5em;
+  }
+  .bk-con{
+      width: 80%;
+  
+      display: flex;
+      margin:4em 0em;
+     justify-content: space-around;
+      flex-wrap: wrap;
+      row-gap: 1.2em;
+    
+  }
+  .bk{
+    width:18em;
+    border: 1px solid rgb(227,227,227);
+  border-radius: 4px;
+    background: grey;
+     display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+      margin-bottom: .75em;
+  }
+  .cimg{
+    width: 100%;
+  
+    background:yellow;
+    object-fit: cover;
+  }
+  .pd{
+    width: 100%;
+    background: white;
+    display: flex;
+      justify-content: flex-end;
+   
+      flex-direction: column;
+      row-gap: 1em;
+      font-size: .7em;
+      padding:2em;
+      overflow-wrap: break-word;
+  }
+  .pd p span:first-child{
+    font-size: .55em;
+    font-weight: 890;
+    border-radius:3px;
+    padding:.15em .5em;
+  color: white;
+  margin-right:1.3em;
+  }
+
+  .pd p:nth-child(1) span{
+    color: black;
+    background:rgb(243,200,6);
+  }
+  
+  .pd p:nth-child(2) span{
+    background:rgb(15,171,52);
+  }
+  
+  
+  .pd p:nth-child(3) span{
+    background:rgb(239,45,45);
+  }
+  .pd p span:last-child{
+    background:white;
+    font-size: .8em;
+  }
+  </style>
+  <body>
+    <div class="mc">
+      <div class="con1">
+        <p>Get A Free Course</p>
+        <input class="inpt" type="text" name="" id="cn" value="" placeholder="Customer Name"/>
+        <input class="inpt" type="text" name="" id="crs" value="" placeholder="Course"/>
+        <input class="inpt" type="text" name="" id="an" value="" placeholder="Author" />
+        <input type="button" name="" id="sbtn" value='SUBMIT' disabled/>
+      </div>
+      <img id="load" src="img/loading.gif" alt="" />
+      <div class="bk-con">
+
+        <div class='bk'>
+ <img class='cimg' src='img/cust-0.jpg'>
+   
+    <div class='pd'>
+
+    <p><span>Name :</span><span>Amit kumar</span></p>
+    <p><span>Course :</span><span>C++ Basics</span></p>
+    <p><span>Author :</span> <span>Amit Kumar</span></p>
+    </div>
+    </div>
+    
+      </div>
+      
+    </div>
+  </body>
+  <script type="text/javascript" charset="utf-8">
+document.querySelectorAll(".inpt").forEach((e)=>{
+  console.log(e)
+e.addEventListener("focusout",()=>{
+   
+   let cn=document.querySelector("#cn"). value;
+    let crs=document.querySelector("#crs"). value;
+    let an=document.querySelector("#an").value;
+    console.log("hi")
+    
+    if(!e.value){
+      e.style.borderColor="red";
+document.querySelector("#sbtn").disabled=true;
+  document.querySelector("#sbtn").style.opacity=".3";
+    }
+    else{
+   e.style.borderColor="green";
+    }
+    
+    if(cn && crs && an){
+  
+  document.querySelector("#sbtn").disabled=false;
+  document.querySelector("#sbtn").style.opacity="1";
+  
+} 
+
+
+});
+e.addEventListener("focusin",()=>{
+   
+e.style.border="3px solid #bbe6e9";
+});
+});
+  document.querySelector("#sbtn").onclick=function(){
+   let cn=document.querySelector("#cn"). value;
+    
+    let crs=document.querySelector("#crs"). value;
+    
+    let an=document.querySelector("#an").value;
+    if(cn && crs && an){
+      
+document.querySelector("input"). insertAdjacentHTML("beforebegin",`
+    
+    <p id=prs>Calculating.....</p>
+   
+    `);
+   
+
+    document.querySelector("#load").style.display="block";
+    
+    
+   setTimeout(function(){
+     const arr_img=[
+       "cust-1.jpg",
+       "cust-2.jpg",
+       "cust-3.jpg",
+       "cust-4.jpg",
+       "cust-5.jpg",
+       ]
+  document.querySelector("#prs").remove();
+document.querySelector("#load").style.display="none";
+document.querySelector(".bk-con"). insertAdjacentHTML("beforeend",`
+    <div class=bk>
+    <img class=cimg src=img/${arr_img[Math.floor(Math.random()*5)]}>
+    <div class=pd>
+    <p><span>Name :</span><span>${cn}</span></p>
+    <p><span>Course :</span><span>${crs}</span></p>
+    <p><span>Author :</span> <span>${an}</span></p>
+    </div>
+    </div>
+    
+    `);
+
+   },3000);
+   document.querySelectorAll(".inpt").forEach((e)=>{
+     e.value=null;
+     e.style.borderColor="rgb(141,103,103)";
+     
+   });
+document.querySelector("#sbtn").disabled=true;
+  document.querySelector("#sbtn").style.opacity=".3";
+    }
+    
+  }
+  </script>
+</html>

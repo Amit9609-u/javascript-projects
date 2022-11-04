@@ -1,0 +1,143 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+<style type="text/css">
+
+
+body{
+
+background:#6592CF;
+
+}
+.box{
+margin:70px;
+width:0;
+height:0;
+position: relative;
+border-left:110px solid transparent ;
+border-right:110px solid transparent;
+border-bottom:130px solid #243D83;
+border-radius:5px;
+
+}
+.sub-box{
+
+position:absolute;
+background:#243D83; 
+height:110px;
+width:160px;
+top:130px;
+left:-80px;
+border-radius:0px 0px 13px 13px;
+}
+
+.up-window {
+
+position: absolute;
+width:120px;
+height:15px;
+background:#000;
+top:-5px;
+left:20px;
+border-radius:20px;
+transition-duration:1s;
+}
+
+.door{
+
+position: absolute;
+width:63px;
+height:60px;
+background:#000;
+bottom:0;
+left:48.5px;
+border-radius:15px 15px 0px 0px;
+transition-duration:1s;
+}
+
+.sub-box label{
+font-weight: 666;
+margin:190px 170px;
+position: absolute;
+background: yellow;
+height: 2.5em;
+width: 2.5em;
+border-radius: 50%;
+display:flex;
+justify-content: center;
+align-items: center;
+border: 1px solid #243D83;
+}
+
+.sw{
+
+width:0;
+height:0;
+position: absolute;
+border-left:30px solid #6592CF;
+border-right:33px solid #6592CF;
+border-bottom:88px solid #6592CF;
+border-top:0px solid transparent;
+left:46px;
+transform: rotate(-176deg);
+bottom:-84px;
+z-index:-1;
+transition:0.5s;
+
+
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="box">
+
+<div class="sub-box">
+
+<label>ON</label>
+
+
+<div class="up-window">
+</div>
+<div class="sw">
+</div>
+
+<div class="door">
+</div>
+
+</div>
+</div>
+
+</body>
+<script>
+
+var k=1
+  document.querySelector(".sub-box").onclick=function (){
+   
+if(k==1){
+document.querySelector(".sub-box label").textContent="OFF";
+//#EEB850
+document.querySelector(".up-window").style.background="#EEB850";
+document.querySelector(".door").style.background="#EEB850";
+k=0
+  
+}
+   else{
+document.querySelector(".sub-box label").textContent="ON";
+document.querySelector(".up-window").style.background="#000";
+document.querySelector(".door").style.background="#000";
+
+k=1
+   }
+  }
+  
+  
+  
+</script>
+</html>

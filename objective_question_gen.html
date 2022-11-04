@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<style type="text/css">
+
+:root{
+
+}
+html{
+
+font-family:Ubuntu;
+
+}
+section{
+
+padding:5px;
+  
+}
+div{
+border:1px solid rgb(0,0,223,0.5);
+border-radius:3px;
+background-color:#eee;
+padding:10px;
+
+}
+input{
+
+border-radius:2px;
+border:1px solid green ;
+outline:orange;
+
+}
+
+#addbtn{
+font-family:Ubuntu;
+width:20%;
+height:30px;
+font-size:18px ;
+border-radius:20px;
+font-weight:900;
+transition:all 0.5s ease-in-out;
+border:0.5px solid indigo;
+background-color:#ff9987;
+color:black;
+
+}
+
+
+#btn{
+  font-family:Ubuntu;
+  width:60%;
+  height:50px;
+  font-size:18px ;
+  border-radius:20px;
+  font-weight:900;
+  transition:all 0.5s ease-in-out;
+  border:0.5px solid indigo;
+  background-color:#ffffff;
+  color:black;
+  margin:1em;
+  
+}
+#btn:hover{
+  
+background:indigo;
+font-size:18px ;
+border:0.5px solid #ffff0;
+color:#ffffff;
+
+}
+</style>
+
+<body id="bd">
+<label>Enter Question: </label>
+<input type="text" id="inptq" style="margin-left:15px">
+<label>Enter Choices:   </label>
+<input type="text" id="inptopt" style="margin-left:20px">
+<br>
+<label>Enter a Answer(Q-nth-optns):</label>
+<input type="text" id="inptanswar" style="width:35px">
+<br>
+<button id="addbtn" style="margin:20px auto; display:block">Add</button>
+<script type="text/javascript">
+
+
+var counter=0;
+var qcounter=0;
+var answr_lst=[]
+function create(quest,qno,...ans){
+
+html=`
+<div style="margin-top:20px;">
+<bold><span>${quest}</span></bold>
+
+<section id="secq${qno}a">
+<input value="Q${qno}A" type="radio" name=q${qno} id="q${qno}a">
+<label id="lblq${qno}a" ">${ans[0]}</label>
+</section>
+
+<section id="secq${qno}b">
+<input value="Q${qno}B" type="radio" name=q${qno} id="q${qno}b">
+<label id="lblq${qno}b" >${ans[1]}</label>
+</section>
+
+<section id="secq${qno}c">
+<input value="Q${qno}C" type="radio" name=q${qno} id="q${qno}c">
+<label id="lblq${qno}c" >${ans[2]}</label>
+</section>
+
+<section id="secq${qno}d">
+<input id="q${qno}d" value="Q${qno}D" type="radio" name=q${qno} id="q${qno}d">
+<label id="lblq${qno}d" >${ans[3]}</label>
+</section>
+
+</div>`
+
+
+document.getElementById("btn").insertAdjacentHTML("beforebegin",html)
+
+
+
+counter++;
+
+}
+
+function check(){
+//list for options => A B C D 
+const arr=["a","b","c","d"]
+
+const answr=answr_lst;
+
+for(let i=1;i<=counter;i++){
+
+for(let j=0;j<4;j++){
+
+k=document.getElementById(`q${i}${arr[j]}`);
+
+if(k.checked && k.value==answr[i-1]){
+
+//document.getElementById(`lblq${i}${arr[j]}`).style.backgroundColor="green";
+
+document.getElementById(`secq${i}${arr[j]}`).style.backgroundColor="#00ab41";
+document.getElementById(`secq${i}${arr[j]}`).style.borderRadius="4px";
+document.getElementById(`secq${i}${arr[j]}`).style.border="1px solid #fff";
+/*document.getElementById(`secq${i}${arr[j]}`).style.marginBottom="5px";
+document.getElementById(`secq${i}${arr[j]}`).style.marginTop="5px";*/
+}
+
+else if(k.checked && k.value!=answr[i-1])
+{
+
+document.getElementById(`secq${i}${arr[j]}`).style.backgroundColor="red";
+document.getElementById(`secq${i}${arr[j]}`).style.borderRadius="4px";
+document.getElementById(`secq${i}${arr[j]}`).style.border="1px solid #fff";
+//document.getElementById(`secq${i}${arr[j]}`).style.marginTop="5px";
+//document.getElementById(`secq${i}${arr[j]}`).style.marginBottom="5px";
+
+//document.getElementById(`lblq${i}${arr[j]}`).style.backgroundColor="red";
+
+document.getElementById(`sec${answr[i-1].toLowerCase()}`).style.backgroundColor="#00ab41";
+document.getElementById(`sec${answr[i-1].toLowerCase()}`).style.borderRadius="4px";
+document.getElementById(`sec${answr[i-1].toLowerCase()}`).style.border="1px solid #fff";
+//document.getElementById(`sec${answr[i-1].toLowerCase()}`).style.margin="5px";
+
+
+}
+else{
+
+     k.disabled=true;
+
+       }
+     }
+   }
+}
+
+/*
+var answr_lst=["Q1A","Q2C","Q3B","Q4D","Q5A","Q6C"]
+
+
+create("What is the Capital of India?",1,"Delhi","Mumbai","Ranchi","Banglore");
+
+create("What is the Capital of Jharkhand?",2,"Delhi","Mumbai","Ranchi","Banglore");
+
+create("What is the Capital of Maharastra?",3,"Delhi","Mumbai","Ranchi","Banglore");
+
+create("What is the Capital of Karnatak?",4,"Delhi","Mumbai","Ranchi","Banglore");
+
+create("What is the Capital of Bihar?",5,"Patna","Mumbai","Ranchi","Banglore");
+
+create("What is the Capital of Manipur?",6,"Patna","Mumbai","Imphal","Banglore");
+*/
+
+
+document.getElementById("addbtn").addEventListener("click",()=>{
+qcounter++;
+let quest=document.getElementById("inptq").value
+
+let optns=document.getElementById("inptopt").value
+
+let inptans=document.getElementById("inptanswar").value
+if(quest.trim() && optns.trim() && inptans.trim()){
+answr_lst.push(`Q${qcounter}${inptans.toUpperCase()}`)
+console.log(answr_lst)
+create(quest,qcounter,...optns.split(","));
+
+}
+});
+
+
+
+
+
+</script>
+<br>
+<center>
+<button id="btn"  onclick="check()">SUBMIT</button></center>
+</body>
+</html>
+
+
+

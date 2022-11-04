@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<style type="text/css">
+
+#b1{
+
+margin-top:350px; 
+background:#7E7C73;
+margin-left:130px;
+font-size:14px ;
+padding-top:10px;
+padding-right:14px;
+padding-left:14px;
+padding-bottom:10px;
+color:#ffffff;
+border-radius:6px;
+border:3px solid #BBC4C2;
+user-select:none;
+}
+
+
+</style>
+<body id="bgc" >
+
+
+<button type="button" onclick="func()" id ="b1" >
+Click Me!
+</button>
+
+<script>
+const arr =["red","green","blue","yellow","pink","indigo","black"];
+let x=0;
+function func(){
+if(x>arr.length){
+x=0;
+}
+document.getElementById("bgc").style.backgroundColor=arr[Math.floor(Math.random()*arr.length)];
+x=x+1;
+}
+</script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css" media="all">
+    *{
+      margin: 0;
+      padding:0;
+      box-sizing: border-box;
+    
+    }
+ body{
+   
+  background:#86bbd8;
+ }
+   .mc{
+     
+     display: flex;
+     flex-direction: column;
+     width:75%;
+    height:auto;
+     background: white;
+     border-radius:8.0px;
+     overflow: hidden;
+    padding-bottom:0em;
+    margin:15% auto;
+    
+ 
+  
+    
+   }
+   .ht{
+     font-weight:555;
+     color:white;
+     text-transform: uppercase;
+     text-align: center;
+     padding-top: .3em;
+     padding-bottom: 1.8em;
+     height:1.6em;
+     font-size: 1.7rem;
+     background:#336699;
+   }
+   .warn{
+     display: none;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height:auto;
+     padding-top:.5em;
+     padding-bottom: 1.5em;
+     width:87%;
+     margin-top:2em;
+     margin-left:1em;
+     background:rgba(242,185,195,.9);
+     border-radius: 5px;
+     row-gap: 1em;
+     
+   }
+   .warn p{
+     color:black;
+     text-align: center;
+   }
+
+ 
+   .tm{
+     margin-top:1.4em;
+   
+    
+
+   }
+    #slct{
+      background:white;
+     margin-top:.5em;
+     outline:0px ;
+    color: #414141;
+    border-color:rgb(160,160,160);
+     border-radius: 5px;
+     font-size: 1.5em;
+     height:2em;
+     width:93.5%;
+     padding-left:.5em;
+     transition:all .1s ease-in-out;
+     
+
+    }
+    #slct:focus{
+outline:3.5px solid rgba(133,177,221,0.5);
+border: 1.4px solid rgba(93,158,222,.7);
+ 
+    }
+    input {
+     transition:all .5s ease-in-out;
+    outline: none;
+    
+      border-top-right-radius:5px;
+      border-bottom-right-radius:5px;
+      
+    border:1px solid rgb(160,160,160);
+      
+      padding-left: .5em;
+      font-size: 1.2em;
+      width:75%;
+      height:2.38em;
+      margin-top:-.04em;
+    }
+    
+    #inpt1:focus{
+outline:3.5px solid rgba(133,177,221,0.5);
+border: 1.4px solid rgba(93,158,222,.7);
+    }
+    #inpt2:focus{
+outline:3.5px solid rgba(133,177,221,0.5);
+border: 1.4px solid rgba(93,158,222,.7);
+ 
+    }
+    .sc{
+     padding-left:1em;
+      
+      height: auto;
+    }
+    .sc p{
+      font-size: 1.3em;
+    }
+    .btn{
+      width:75%;
+      height:2em;
+      font-size: 1.5em;
+      margin:1em 0em 13% 13%;
+      border-radius: 6px;
+      color: white;
+      outline: none;
+      border: 0;
+      background:  #336699;
+      transition:all .5s ease-in-out;
+      user-select: none;
+      
+    }
+    .btn:hover{
+outline:3.5px solid rgba(133,177,221,0.5);
+border: 1.4px solid rgba(93,158,222,.7);
+ 
+background:#86bbd8;
+color: black;
+      
+    }
+    
+    .result{
+      margin-top:-1em;
+      width:100%;
+      height:auto;
+      background:white;
+      margin-bottom: 2em;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: .5em;
+      display: none;
+      
+    }
+    .result p{
+font-size: 1.9em;
+text-align: center;
+display:none;
+border: 2px solid white;
+
+    }
+    .fb-img{
+      
+   display: none;
+      height:11em;
+      width:11em;
+    }
+  
+    
+    .sci{
+      padding: 0;
+      display:flex;
+      margin-top: .8em;
+      margin-bottom:.7em;
+      
+    }
+    .sci i{
+      background:  #336699;
+      font-size: 1.2em;
+      height:2.3em;
+      width:2.4em;
+      color:white;
+      
+border-top-left-radius:5px;
+      border-bottom-left-radius:5px;
+    }
+    #dlr{
+      padding-left:.9em;
+      padding-top:.7em;
+    }
+    #con{
+padding-left:.1em;
+      padding-top:.6em;
+      
+      
+    }
+    @media screen and (min-width:500px){
+      #slct{
+        width:86.5%;
+      }
+      .mc{
+        width:40%;
+      }
+    }
+    </style>
+  </head>
+  <body>
+  
+ <div class="mc">
+<p class="ht">tip calculator</p>
+
+<div class="warn">
+  <p>Bill Amount Cannot Be Blank</p>
+<p>Number Of Users Must Be Greater Than Zero</p>
+<p>
+You Must Select A Service
+</p>
+  </div>
+  
+<div class="tm">
+ <div class="sc"><p for="inpt1">How Much Was Your Bill ?</p>
+<div class="sci">
+  <i id="dlr" class="fas fa-dollar-sign"></i>
+ <input id="inpt1" type="number">
+
+</div> 
+
+ </div>
+ 
+ 
+ 
+ <div class="sc"><p for="inpt1">How Many People Sharing The Bill ?</p>
+ 
+<div class="sci">
+  <i id="con" class="fas fa-user fa-fw"></i>
+ <input id="inpt2" type="number">
+
+</div> 
+ </div>
+ <div class="sc">
+   <p>How Was Your Service?</p>
+<select id="slct"  >
+  <option >Choose...</option>
+  <option>
+    Great - 20%
+  </option>
+<option>
+    Good - 10%
+  </option>
+<option >
+    Bad - 5%
+  </option>
+  
+</select>
+ </div>
+ </div>
+ <button class="btn" type="submit">Calculate</button>
+  <div class="result">
+    <img src="img/fb.gif" class="fb-img">
+    
+  
+    <p>Tip Amount $ 1.6</p>
+    <p>Total Amount $ 55.78</p>
+    <p>Each Person Owes $ 5.75</p>
+
+  </div>
+    </div>
+ 
+
+ 
+  </body>
+  <script >
+  
+  var slct=document.querySelector("#slct");
+  var btn=document.querySelector(".btn");
+ var wrn=document.querySelector(".warn");
+var inpt1=document.querySelector("#inpt1");
+var inpt2=document.querySelector("#inpt2");
+
+ /* slct.onchange=()=>{
+    v=slct.options[slct.selectedIndex];
+    console.log(v)
+    document.querySelector("p").innerHTML=v.text }
+*/
+
+btn.onclick=function(){
+ 
+
+var val=0;
+
+var res=1;
+var sv=slct.options[slct.selectedIndex];
+  console.log(sv)
+  
+  if(inpt1.value!=""){
+    console.log("kol")
+    
+document.querySelector(".warn p:nth-child(1)").style.display="none";
+val+=1;
+    
+  }else{
+document.querySelector(".warn p:nth-child(1)").style.display="block";
+
+  }
+ 
+  if(inpt2.value!="" && Number(inpt2.value>0)){
+document.querySelector(".warn p:nth-child(2)").style.display="none";
+val+=1;
+    
+  }else {
+document.querySelector(".warn p:nth-child(2)").style.display="block";
+
+  }
+  if(sv.text!="Choose..."){
+
+document.querySelector(".warn p:nth-child(3)").style.display="none";
+val+=1;
+
+  }else{
+document.querySelector(".warn p:nth-child(3)").style.display="block";
+  }
+  
+  if(val>=0 && val<=2){
+
+wrn.style.display="flex";
+res=0;
+val=0;
+setTimeout(function (){
+  
+
+wrn.style.display="none";
+
+
+},5000);
+
+  }
+  
+  
+  
+  
+  if(res==1){
+    function tip(ttb,prcnt){
+      return ((ttb*prcnt)/100);
+    }
+let total_bill=Number(inpt1.value);
+
+let per=[20,10,5][slct.selectedIndex-1];
+let tip_amt=tip(total_bill,per);
+let n=Number(inpt2.value);
+let pay_amt=(total_bill+tip_amt).toFixed(2);
+let each_amt=((total_bill+tip_amt)/n).toFixed(2);
+
+console.log(tip_amt.toFixed(2),pay_amt,each_amt);
+
+document.querySelector(".result").style.display="flex";
+
+document.querySelector(".fb-img").style.display="block";
+
+
+setTimeout (function(){
+document.querySelector(".fb-img").style.display="none";
+document.querySelector(".result :nth-child(2)").style.display="block";
+
+document.querySelector(".result :nth-child(3)").style.display="block";
+document.querySelector(".result :nth-child(4)").style.display="block";
+
+
+document.querySelector(".result :nth-child(2)").innerHTML=`Tip Amount $ ${tip_amt.toFixed(2)}`;
+
+document.querySelector(".result :nth-child(3)").innerHTML=`Total Amount $ ${pay_amt}`;
+document.querySelector(".result :nth-child(4)").innerHTML=`Each Person Owes $ ${each_amt}`;
+
+
+
+
+
+},3000);
+
+
+
+setTimeout(function(){
+  
+document.querySelector(".result").style.display="none";
+document.querySelector(".result :nth-child(2)").style.display="none";
+
+document.querySelector(".result :nth-child(3)").style.display="none";
+
+document.querySelector(".result :nth-child(4)").style.display="none";
+inpt1.value=null;
+inpt2.value=null;
+slct.options[0].selected=true;
+
+
+
+},8000);
+
+
+
+  }
+  
+}
+
+
+  
+  
+
+  </script>
+</html>
+
+
+

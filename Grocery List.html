@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style type="text/css" media="all">
+    *{
+      padding: 0;
+      margin:0;
+      box-sizing: border-box;
+      
+    }
+      body{
+        background-color:rgba(0,0,0,0.5);
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+        align-items: center;
+        
+      }
+      .con1{
+box-shadow: 0 5px 10px #272932;
+        border: 3px solid black ;
+        border-radius: 5px;
+        width:80%;
+        min-height:15em;
+        background:#4d7ea8;
+        margin-top:5em;
+       display: flex;
+      flex-direction: column;
+      justify-content: center;
+        align-items: center;
+        row-gap: 2em;
+      }
+      .shake{
+        animation:shake .3s;
+      }
+      @keyframes shake{
+        25%{
+          transform: translateX(4px);
+        }
+        50%{
+          transform: translateX(-4px);
+        }
+        75%{
+          transform: translateX(4px);
+        }
+        
+      }
+      .con2{
+box-shadow: 0 5px 10px #272932;
+border: 3px solid black ;
+        border-radius: 5px;
+        width:80%;
+        min-height:6em;
+        background: #b6c2d9;
+        margin-bottom: 1em;
+        margin-top:2.5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+        align-items: center;
+        row-gap: 2em;
+      }
+      .items {
+        width:100%;
+        
+display: flex;
+flex-direction: column;
+   
+      justify-content: space-around;
+        align-items: center;
+        row-gap: 1em;
+      }
+      
+      .item{
+        width:14em;
+        height: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top:-1em;
+        margin-bottom:1.5em;
+        transition: .8s;
+padding:.5em;
+border-radius: 5px;
+      }
+      .item:hover{
+        background:#808080;
+        
+      }
+      .item p{
+        width:4em;
+       font-size: 1.5em;
+       font-weight: 777;
+        overflow-wrap: break-word;
+      }
+      .item i{
+transition:1s;
+      }
+      .item:hover i{
+        font-size: 1.5em;
+        
+      }
+      * {
+        text-transform: capitalize;
+      }
+      #warn{
+        margin-top:1em;
+      margin-bottom: -1em;
+        border-radius: 7px;
+        text-align: center;
+        width:80%;
+        padding: .65em;
+        background:transparent;
+        font-weight: 666;
+        border: 2.5px solid rgb(70,176,75);
+        color:rgb(70,176,75);
+        display: none;
+        overflow-wrap: break-word;
+      }
+      
+      .warn{
+        margin-top:1.5em;
+      margin-bottom: -2.5em;
+        border-radius: 5px;
+        text-align: center;
+        width:80%;
+        padding: .85em;
+       border:2px solid green;
+       color:green;
+        display: none;
+        overflow-wrap:break-word;
+      }
+      
+      #agi{
+        color: #b6c2d9;
+        font-size: 1.8em;
+        text-align: center;
+        font-weight: 777;
+        width:80%;
+        margin-top:1em;
+      margin-bottom: -.5em;
+        
+      }
+      input{
+        font-weight: 633;
+        margin-top:-1em;
+        width:75%;
+        padding: .5em;
+        font-size: 1.5em;
+        background: transparent;
+        text-transform: uppercase;
+        text-decoration: underline;
+        border: none;
+        outline: none;
+        border-bottom: 4px solid #949494;
+        
+        
+      }
+      button{
+        font-size: 1.3em;
+        padding:.4em 2em;
+        border-radius: 6px;
+        border:0;
+        margin-bottom: 1em;
+        margin-top:.7em;
+        background:transparent;
+        
+      }
+      .sbtn{
+        color: #b6c2d9;
+        border: 3px solid  #b6c2d9 ;
+      }
+      .clr{
+       margin-top:-1em;
+        border: 3px solid #4d7ea8;
+      }
+      .warn + p {
+        font-size: 1.8em;
+       font-weight: 666;
+       margin-top:1em;
+       color: #4d7ea8;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class="con1">
+      <p id="warn"></p>
+      
+      <p id="agi">add grocery items</p>
+      <input type="text">
+      <button class="sbtn" type="submit">submit here</button>
+    </div>
+    <div class="con2">
+      <p class="warn"></p>
+      <p>grocery items</p>
+<div class="items">
+  
+</div>
+      <button class="clr" type="submit">clear items</button>
+    </div>
+  </body>
+  <script type="text/javascript" charset="utf-8">
+    var iv="";
+    var i=1;
+    document.querySelector(".sbtn").onclick=function (){
+      inptv=document.querySelector("input").value;
+      if(!inptv){
+        document.querySelector("#warn"). style.display="block";
+    document.querySelector("#warn").style.color="red";
+document.querySelector("#warn").style.borderColor="red";
+
+        document.querySelector(".con1 :nth-child(1)").innerHTML="Please Add Grocery Item";
+        
+  document.querySelector("input").classList.add("shake");
+
+      }
+      else{
+document.querySelector("input").classList.remove("shake");
+
+document.querySelector("#warn"). style.display="block";
+document.querySelector(".con1 :nth-child(1)").innerHTML=`${inptv.capitalize()} Added To The List`;
+        
+document.querySelector(".items"). insertAdjacentHTML ("beforeend",`
+  <div class=item id=item${i}>
+       <p>${inptv}</p>
+ 
+ <div id=btn${i}>     
+  <i style=color:red; class='fas fa-trash' ></i>
+    
+</div>
+  </div>
+    
+      `);
+document.querySelectorAll(`.item`).forEach(function(e){
+      e.children[1].addEventListener("click",function(){
+        e.remove();
+        
+document.querySelector(".warn").innerHTML=`${e.children[0].innerText} Removed From The List`;
+document.querySelector(".warn").style.display="block";
+setTimeout(()=>{
+  
+document.querySelector(".warn").style.display="none";
+document.querySelector(".warn").innerHTML="";
+
+},2000);    
+
+      });
+});
+
+
+    i++;
+        
+      }
+      setTimeout(()=>{
+         
+document.querySelector(".con1 :nth-child(1)").innerHTML="";
+document.querySelector("#warn"). style.display="none";
+document.querySelector("#warn").style.color="rgb(70,176,75)";
+document.querySelector("#warn").style.borderColor="rgb(70,176,75)";
+document.querySelector("input").classList.remove("shake");
+
+        },2000);
+
+        
+      document.querySelector("input").value="";
+
+      
+    }
+    
+    
+    document.querySelector(".clr").onclick=function(){
+     i=1;
+document.querySelector(".warn").style.color="red";
+
+document.querySelector(".warn").style.border="2px solid red";
+
+     
+      if(!document.querySelector(".items").children.length){
+document.querySelector(".warn").innerHTML="No More Items To Delete";
+document.querySelector(".warn").style.display="block";
+
+
+      }
+      else{
+document.querySelector(".items").innerHTML="";
+document.querySelector(".warn").innerHTML="All Items Deleted";
+document.querySelector(".warn").style.display="block";
+      }
+      
+setTimeout(()=>{
+  
+document.querySelector(".warn").style.display="none";
+document.querySelector(".warn").innerHTML="";
+document.querySelector(".warn").style.color="green";
+
+document.querySelector(".warn").style.border="2px solid green";
+
+},2000);    
+
+    }
+    
+  </script>
+</html>

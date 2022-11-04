@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css" media="all">
+     *{
+       margin:0;
+       padding:0;
+       box-sizing: border-box;
+      
+     }
+    .dv1{
+
+       display: flex;
+   justify-content: center;
+  margin-top: 3em;
+     }
+     #p1{
+       text-align: center;
+       margin-top:2em;
+     } 
+     div{
+       
+display: flex;
+   justify-content: center;
+   margin-top: 1em;
+     }
+     button{
+       padding:.8em;
+       width:7em;
+   
+   
+     }
+    </style>
+  </head>
+  <body>
+    <div class="dv1">
+   <img id="img" src="."/>
+    </div>
+ 
+    
+  <p id="p1">Here click on this button</p>
+ 
+    <div>
+  <button>Get Joke</button>
+     </div>
+  
+  </body>
+  <script type="text/javascript" charset="utf-8">
+  
+ let url='https://api.chucknorris.io/jokes/random';
+ document.querySelector("button").onclick=function (){
+fetch(url).then(res=> res.text()).then((k)=>{
+  data=JSON.parse(k);
+  console.log(data)
+  document.getElementById("img").src=data.icon_url;
+  document.getElementById("p1").innerHTML=data.value;
+  
+});
+}
+
+  </script>
+  
+</html>

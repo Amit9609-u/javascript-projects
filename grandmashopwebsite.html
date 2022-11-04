@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>grandma's-shop.com</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link href="https://fonts.googleapis.com/css?family=Kaushan Script" rel='stylesheet'>
+  </head>
+  
+  <style>
+  
+  *{
+    padding:0;
+    margin: 0;
+    user-select: none;
+    
+  }
+  body{
+ padding: 0;
+ margin: 0;
+  font-family: "Kaushan Script", cursive;
+  font-weight:991;
+  font-size:1em;
+  
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  }
+.sec3{
+  
+  height:auto;
+  background:rgb(238, 238, 238);
+  width:100%;
+  padding-top:3em;
+
+  padding-bottom:4em;
+}
+
+ .pbs{
+  
+   width:100%;
+   height:auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+ .pbs p{
+   font-size: 2.7em;
+   font-weight:555;
+ }
+ .pbs p:after{
+   content:" Store";
+   font-size: 1.5em;
+   color: #ef7998;
+   font-weight:888;
+ }
+ .vbtn{
+   display:flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-items: center;
+   margin-top:.3em;
+   margin-bottom: 1em;
+ 
+  width:100%;
+ height:7.0em;
+ }
+ .vbtn button{
+   font-family: "Kaushan Script";
+    background: rgb(238, 238, 238) ;
+    color:black;
+    border-radius: 5px;
+    border:1px solid black;
+    padding: .4em;
+    height:2.8em;
+    width:auto;
+    padding-right:.7em;
+    padding-left: .7em;
+    font-size: 1rem;
+    font-weight: 336;
+    transition:all .5s ease-in-out;
+   margin:.7em;
+    box-sizing: border-box;
+
+ }
+ /*
+ .vbtn :nth-child(1){
+ width:4em;
+
+ }
+ 
+ .vbtn :nth-child(2){
+   width:5em;
+
+ 
+ }
+ .vbtn button:nth-child(3){
+   width: 7em;
+ }
+ 
+ .vbtn button:nth-child(4){
+   width:6em;
+ }
+ 
+ .vbtn button:nth-child(5){
+   width:8em;
+ }
+ */
+ .vbtn button:hover{
+     border:.3rem solid rgb(134,124,124);
+     background: black;
+     color: #ef7998 ;
+ }
+ 
+ 
+ 
+ #sbox{
+   letter-spacing: 2.5px;
+   font-family: "Kaushan Script";
+  border-radius:0 .2em .2em 0;
+   font-size:.99em;
+   width:14em;
+   height:1.5em;
+   padding:.6em;
+   outline: none;
+   border:2px solid rgb(185,185,185);
+ }
+.sicon{
+  margin-top:1em;
+  display: flex;
+  flex-direction: row;
+}
+.sicon i{
+  font-size: 1.2em;
+  padding:.5em;
+  background:#ef7998;
+  border-radius:0.2em 0 0 0.2em;
+  border: 1.5px solid rgb(185,185,185);
+}
+ #container{
+
+   display: flex;
+   width:auto;
+   background:rgb(238, 238, 238);
+   justify-content:space-around;
+   flex-wrap:wrap;
+  
+  
+ }
+ .mc{
+   
+ width:18em;
+ height:21em;
+ background:white;
+ margin-top:2em;
+ margin-bottom:0.5em;
+ border:2px solid white;  /* white*/
+ box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+ 0 2px 2px rgba(0,0,0,0.12), 
+ 0 4px 4px rgba(0,0,0,0.12), 
+ 0 8px 8px rgba(0,0,0,0.12),
+ 0 16px 16px rgba(0,0,0,0.12);
+ overflow: hidden;
+ position:relative;
+ 
+ }
+ 
+ .img-cont{
+   position: absolute;
+  width: 100%;
+  height: 16.05em;
+  overflow: hidden;
+ }
+#con1{
+  
+ width:18em;
+ height:16em;
+  
+  transition:all 1s ease-in-out;
+  position: absolute;
+
+   }
+.img-cont:hover #con1{
+  transform:scale(1.28);
+  }
+ #con2{
+   width:18em;
+   height:16em;
+   
+   background-repeat: no-repeat;
+   background-size:18em 16em;
+   transition:all 1s ease-in-out;
+   
+   }
+ #con2:hover{
+   transform:scale(1.28);
+   }
+ #con3{
+   width:18em;
+   height:16em;
+   
+   background-repeat: no-repeat;
+   background-size:18em 16em;
+   transition:all 1s ease-in-out;
+   
+ }
+ #con3:hover{
+ transform:scale(1.28);
+ }
+ #con4{
+  
+   width:18em;
+   height:16em;
+   
+   background-repeat: no-repeat;
+   background-size:18em 16em;
+  transition:all 1s ease-in-out;
+  
+  
+ }
+ #con4:hover{
+ transform:scale(1.2);
+ }
+ .prb{
+ border: 3px solid white;
+ width:100%;
+ height:100%;
+ box-sizing: border-box;
+ background: white;
+ position: absolute;
+ top:256px;
+ display:flex;
+ justify-content: space-between;
+ padding-top:1em;
+ padding-left:1em;
+ padding-right:1.5em ;
+ margin:0;
+ 
+ }
+.bicon {
+ background:rgb(249, 228, 148);
+ position: absolute;
+ transition:all 1s ease-in-out;
+ width:40px;
+ height:40px;
+ font-size:1.2em;
+ border-top-left-radius:.8em;
+ font-weight:799;
+ padding-left: .78em;
+ padding-top: .7em;
+ top: 205px;
+ left:16em;
+ 
+ }
+ .bicon i{
+transition:all .4s ease-in-out;
+ }
+ .img-cont:hover .bicon{
+   left:12.4em;
+ }
+ .bicon i:hover{
+   color: white;
+ }
+ 
+ .about-us{
+  
+   display: flex;
+  
+   flex-wrap: wrap;
+  background:white;
+   
+ }
+ 
+.about-txt{
+ 
+  background:white;
+  
+  min-width:50.8%;
+  height:auto;
+     display: flex;
+     flex-direction: column;
+     justify-content:flex-start;
+     align-items: flex-start;
+}
+
+ .about-txt h1{
+     font-size: 2.5rem;
+    margin-top: 2.2em;
+     font-weight:300;
+     color:black;
+     margin-left: 2.8rem;
+     font-weight:444;
+   }
+   .about-txt h1:after{
+     font-size: 4rem;
+    content:" Us";
+     font-weight:999;
+     color:#ef7998;
+   }
+   .abusp{
+    width: 15em;
+    
+   }
+   .about-txt p{
+     font-size: 1rem;
+     font-weight: 533;
+     margin-left:2.8rem;
+     margin-top:1.3em;
+     opacity: .7;
+    
+   }
+  .sbtn{
+font-family: "Kaushan Script", cursive;
+    background: white ;
+    color:black;
+    border-radius: 5px;
+    border:1.2px solid black;
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+    margin-left:2.8rem;
+    padding-left: .5em;
+  padding-right:.5em;
+  height:2.1em;
+    width:auto;
+   
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 499;
+    transition:all .5s ease-in-out;
+   }
+ .sbtn:hover{
+     border:2px solid rgb(190,226,242);
+     background: black;
+     color:#ef7998;
+   }
+   
+.about-img{
+ 
+  position: relative;
+  width: 100%;
+  height: 20em;
+  background: white;
+display:flex;
+  justify-content: center;
+  align-items: center;
+
+ 
+}
+
+.sub-img-cont{
+ position:absolute;
+  border: 7px solid rgb(249, 228, 148);
+  width: 64%;
+  height:64%;
+  transform: translate(-10%,-10%);
+  transition: all 1.2s ease-in-out;
+  margin:0;
+  padding: 0;
+}
+#dimg{
+  width: 75%;
+  height:75%;
+  position: absolute;
+ background-image: url("img/sweets-1.jpeg");
+background-size: 85.5% 86%;
+background-repeat: no-repeat;
+  margin-left: 20%;
+  margin-top:10%;
+}
+
+.banner{
+
+
+  width:100%;
+  height: 100vh;
+}
+.bimg{
+  
+
+ position:relative;
+  
+  height: 100vh;
+  background:linear-gradient(rgba(249, 228, 148, 0.5),rgba(249, 228, 148, 0.5)) , url("img/headerBcg.jpeg") center/cover fixed no-repeat;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.bimg p{
+  position:absolute;
+ 
+ 
+}
+.bimg .p1{
+  font-size: 2.8em;
+  margin-top:-3em;
+  color:white;
+  font-weight: 77;
+}
+
+.bimg .p2{
+  color:  #ef7998;
+  font-size: 4rem;
+  font-weight:1000;
+  
+  
+}
+.usbtn{
+  text-transform: uppercase;
+font-family: "Kaushan Script", cursive;
+    background: transparent;
+    color: black;
+    border-radius: 3px;
+    border:.12em solid black;
+  margin-top:7em;
+  width:6em;
+  height: 2.3em;
+ 
+    font-size: 1.5em;
+    font-weight: 433;
+
+    transition:all .5s ease-in-out;
+   
+   }
+ .usbtn:hover{
+     border:.3rem solid rgba(174,219,226,0.7);
+     background: black;
+     color:  #ef7998;
+   }
+   
+   .nav{
+     background:white;
+     width:100%;
+     height:4.8em;
+     position:relative;
+    transition:all .2s ease-in-out;
+    
+   }
+   .nav-btn{
+     position: absolute;
+     font-size:2.8em;
+     right:.9em;
+     top:.40em;
+     color:#ef7998;
+   }
+   .nav ul{
+     top:4em;
+     position:absolute;
+     list-style: none;
+    margin-top:-.5em;
+     font-size: 1.6em;
+     font-weight:444;
+    padding-left: 1em;
+     display: none;
+     box-sizing: border-box;
+width: 100%;
+   }
+.nav ul li{
+
+  color:  #ef7998;
+  padding-bottom:.7em;
+  transition:all .4s ease-in-out;
+
+}
+.nav ul li:hover{
+  color:black;
+}
+.logo{
+  position: absolute;
+  width: 5em;
+  height:5em;
+  background: url("img/logo.svg") no-repeat;
+  top:1em;
+  left:1.5em;
+}
+
+
+ @media screen and (min-width:720px){
+   body{
+   
+     background-size: 100vh 100vh;
+   }
+   #dimg{
+     
+   }
+   .about-txt{
+     
+     margin-top:-2.5em;
+   }
+   .about-txt h1{
+   
+     font-size: 3em;
+   margin-left:-.3em;
+     font-weight:999;
+     color: black;
+   }
+   .abusp{
+     width: 20em;
+     overflow-wrap: break-word;
+     margin-left:2em;
+   }
+   .about-txt p{
+     margin-left:2.6em;
+     font-size: 1em;
+   
+   }
+   .sbtn{
+     margin-left:-5em;
+   }
+   
+   
+   
+   .about-txt{
+     width:50%;
+     height: 30em;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+   }
+   
+   .about-img{
+     width:49.2%;
+     height:30em;
+   }
+   
+   
+ }
+ 
+  </style>
+  <body>
+    <div class="nav" id="nv">
+      <div class="logo">
+        
+      </div>
+        <i id="nb" class="fa fa-navicon nav-btn"></i>
+      
+      <ul id="ml">
+      <li>Home</li>  
+      <li>About</li>
+      <li>Store</li>
+      </ul>
+    </div>
+    <div class="banner">
+      <div class="bimg">
+       <p class="p1">
+        Welcome To
+       </p>
+       <p class="p2">
+         Grandma's
+       </p>
+  <button class="usbtn" type="submit">Explore</button>
+      </div>
+      
+    </div>
+    <section class="sec2">
+      <div class="about-us">
+        <div class="about-txt">
+          <h1 class="">About</h1>
+          
+       <div class="abusp">
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aliquam voluptas beatae vitae expedita consectetur nesciunt quia deserunt asperiores facere fuga dicta fugiat corrupti et omnis porro at dolorum! Ad!
+          </p>
+       </div>
+          <button class="sbtn" type="submit">Explore</button>
+        </div>
+        <div class="about-img">
+          <div id="sic" class="sub-img-cont">
+          
+          </div>
+             <div id="dimg"></div>
+        </div>
+      </div>
+    </section>
+      
+      
+   <div class="sec3">
+    
+    <div class="pbs">
+      <p>Our</p>
+      <div class="vbtn" id="kl"> 
+  <button>ALL</button>
+  <button>CAKES</button>
+  <button>CUPCAKES</button>
+  <button>SWEETS</button>
+  <button>DOUGHNUTS</button>
+      </div>
+      <div class="sicon">
+        <i class="fa fa-search"></i>
+       <input placeholder="Item...." type="text" name="sbox" id="sbox" value="" />
+        
+      </div>
+      
+    </div>
+    
+    
+   <div id="container">
+   
+ </div>
+ 
+ 
+ 
+</div>
+
+  </body>
+  
+ <script type="text/javascript">
+var val=1;
+//image details record 
+const lst=[
+  {
+    id:"mc1",
+    isrc:"cupcake-3.jpeg",
+    name:"Meo Cake",
+    price:'$ 87',
+  },
+  {
+    id:"mc2",
+    isrc:"cake-1.jpeg",
+    name:"Meon Cake",
+    price:'$ 78',
+  },
+  {
+    id:"mc3",
+    isrc:"cake-3.jpeg",
+    name:"Sweet Cake",
+    price:'$ 74',
+  },
+  {
+    id:"mc4",
+    isrc:"cake-2.jpeg",
+    name:"Metor Cake",
+    price:'$ 55',
+  },
+  ]
+lst.forEach((data)=>{
+  console.log(data.id)
+         document.querySelector("#container").insertAdjacentHTML("afterbegin",`
+  <div class="mc" id=${data.id}>
+   <div class="img-cont">
+<img id="con1" src="img/${data.isrc}" />
+  <div class="bicon">
+   <i class='fa fa-shopping-cart cart'></i>
+   </div>
+   </div>
+   
+   <div class="prb">
+   <p>${data.name}</p>
+   <p>${data.price}</p>
+   </div>
+ </div>
+ `)
+});
+  
+  
+var arr=[];
+    document.querySelector("#sbox").onkeyup=function(event){
+      document.querySelector("#container").innerHTML="";
+      usrdata = event.target.value;
+      
+      arr= lst.filter((g)=>{
+    
+    
+        return g.name.toLowerCase().startsWith(usrdata.toLowerCase());
+    
+    });
+      
+      arr.forEach((data)=>{
+         document.querySelector("#container").insertAdjacentHTML("afterbegin",`
+  <div class="mc" id=${data.id}>
+   <div class="img-cont">
+<img id="con1" src="img/${data.isrc}" />
+  <div class="bicon">
+   <i class='fa fa-shopping-cart cart'></i>
+   </div>
+   </div>
+   <div class="prb">
+   <p>${data.name}</p>
+   <p>${data.price}</p>
+   </div>
+ </div>
+ `)});
+  arr=[];
+      
+  
+    }
+
+/*
+ <div class="mc" id="mc1">
+   <div class="img-cont">
+<img id="con1" src="img/cupcake-3.jpeg" alt="" />
+  <div class="bicon">
+   <i class='fa fa-shopping-cart cart'></i>
+   </div>
+   </div>
+   
+   <div class="prb">
+   <p>Li Cake</p>
+   <p>$ 7</p>
+   </div>
+ </div>*/
+
+  
+document.getElementById("dimg").addEventListener("mouseover",function(){
+ document.getElementById("sic").style.transform="translate(6.59%,.2%)";
+});
+
+document.getElementById("dimg").addEventListener("mouseout",function(){
+ document.getElementById("sic").style.transform="translate(-10%,-10%)";
+ 
+});
+
+document.getElementById("nb").addEventListener("click", function(){
+  document.getElementById("ml").style.display="block";
+  if(val==1){
+  document.getElementById("nv").style.height="16em";
+  val=0;
+  }else{
+document.getElementById("nv").style.height="5.5em";
+val=1;
+  }
+  
+});
+
+
+  </script>
+  
+</html>

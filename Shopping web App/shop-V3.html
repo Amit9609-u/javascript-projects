@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>grandma's-shop.com</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+<link href="https://fonts.googleapis.com/css?family=Kaushan Script" rel='stylesheet'>
+
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  </head>
+  
+  <style> 
+  
+  *{
+    padding:0;
+    margin: 0;
+    user-select: none;
+ 
+  }
+  body{
+    
+ padding: 0;
+ margin: 0;
+  font-family: "Kaushan Script", cursive;
+  font-weight:991;
+  font-size:1em;
+  
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  }
+.sec3{
+  
+  height:auto;
+  background:rgb(238, 238, 238);
+  width:100%;
+  padding-top:3em;
+
+  padding-bottom:4em;
+}
+ .pbs{
+  
+   width:100%;
+   height:auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+ .pbs p{
+   font-size: 2.7em;
+   font-weight:555;
+ }
+ .pbs p:after{
+   content:" Store";
+   font-size: 1.5em;
+   color: #ef7998;
+   font-weight:888;
+ }
+ .vbtn{
+   display:flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-items: center;
+   margin-top:.3em;
+   margin-bottom: 1em;
+ 
+  width:100%;
+ height:7.0em;
+ }
+ .vbtn button{
+   font-family: "Kaushan Script";
+    background: rgb(238, 238, 238) ;
+    color:black;
+    border-radius: 5px;
+    border:1px solid black;
+    padding: .4em;
+    height:2.8em;
+    width:auto;
+    padding-right:.7em;
+    padding-left: .7em;
+    font-size: 1rem;
+    font-weight: 336;
+    transition:all .5s ease-in-out;
+   margin:.7em;
+    box-sizing: border-box;
+
+ }
+ /*
+ .vbtn :nth-child(1){
+ width:4em;
+
+ }
+ 
+ .vbtn :nth-child(2){
+   width:5em;
+
+ 
+ }
+ .vbtn button:nth-child(3){
+   width: 7em;
+ }
+ 
+ .vbtn button:nth-child(4){
+   width:6em;
+ }
+ 
+ .vbtn button:nth-child(5){
+   width:8em;
+ }
+ */
+ .vbtn button:hover{
+     border:.3rem solid rgb(134,124,124);
+     background: black;
+     color: #ef7998 ;
+ }
+ #sbox{
+   letter-spacing: 2.5px;
+   font-family: "Kaushan Script";
+  border-radius:0 .2em .2em 0;
+   font-size:.99em;
+   width:14em;
+   height:1.5em;
+   padding:.6em;
+   outline: none;
+   border:2px solid rgb(185,185,185);
+ }
+.sicon{
+  margin-top:1em;
+  display: flex;
+  flex-direction: row;
+}
+.sicon i{
+  font-size: 1.2em;
+  padding:.5em;
+  background:#ef7998;
+  border-radius:0.2em 0 0 0.2em;
+  border: 1.5px solid rgb(185,185,185);
+}
+ #container{
+
+   display: flex;
+   width:auto;
+   background:rgb(238, 238, 238);
+   justify-content:space-around;
+   flex-wrap:wrap;
+  
+  
+ }
+ .mc{
+   
+ width:18em;
+ height:21em;
+ background:white;
+ margin-top:2em;
+ margin-bottom:0.5em;
+ border:0;  /* white*/
+ border-radius: .2em;
+ box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+ 0 2px 2px rgba(0,0,0,0.12), 
+ 0 4px 4px rgba(0,0,0,0.12), 
+ 0 8px 8px rgba(0,0,0,0.12),
+ 0 16px 16px rgba(0,0,0,0.12);
+ overflow: hidden;
+ position:relative;
+ 
+ }
+ .img-cont{
+   position: absolute;
+  width: 100%;
+  height: 16.05em;
+  overflow: hidden;
+  
+ }
+.con{
+  
+ width:18em;
+ height:16em;
+  
+  transition:all 1s ease-in-out;
+  position: absolute;
+
+   }
+.img-cont:hover .con{
+  transform:scale(1.28);
+  }
+ .prb{
+ border: 3px solid white;
+ width:100%;
+font-size: 1.2em;
+font-weight:598;
+ height:100%;
+ box-sizing: border-box;
+ background: white;
+ position: absolute;
+ top:256px;
+ display:flex;
+ justify-content: space-between;
+ padding-top:1em;
+ padding-left:1em;
+ padding-right:1.5em ;
+ margin:0;
+ 
+ }
+.bicon {
+ background:rgb(249, 228, 148);
+ position: absolute;
+ transition:all 1s ease-in-out;
+ width:40px;
+ height:40px;
+ font-size:1.2em;
+ border-top-left-radius:.8em;
+ font-weight:799;
+ padding-left: .78em;
+ padding-top: .7em;
+ top: 205px;
+ left:16em;
+ 
+ }
+ .bicon i{
+transition:all .4s ease-in-out;
+ }
+ .img-cont:hover .bicon{
+   left:12.4em;
+ }
+ .bicon i:hover{
+   color: white;
+ }
+ .about-us{
+  
+   display: flex;
+  
+   flex-wrap: wrap;
+  background:white;
+   
+ }
+.about-txt{
+ 
+  background:white;
+  
+  min-width:50.8%;
+  height:auto;
+     display: flex;
+     flex-direction: column;
+     justify-content:flex-start;
+     align-items: flex-start;
+}
+ .about-txt h1{
+     font-size: 2.5rem;
+    margin-top: 2.2em;
+     font-weight:300;
+     color:black;
+     margin-left: 2.8rem;
+     font-weight:444;
+   }
+   .about-txt h1:after{
+     font-size: 4rem;
+    content:" Us";
+     font-weight:999;
+     color:#ef7998;
+   }
+   .abusp{
+    width: 15em;
+    
+   }
+   .about-txt p{
+     font-size: 1rem;
+     font-weight: 533;
+     margin-left:2.8rem;
+     margin-top:1.3em;
+     opacity: .7;
+    
+   }
+  .sbtn{
+    
+scroll-behavior: "smooth";
+font-family: "Kaushan Script", cursive;
+    background: white ;
+    color:black;
+    border-radius: 5px;
+    border:1.2px solid black;
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+    margin-left:2.8rem;
+    padding-left: .5em;
+  padding-right:.5em;
+  height:2.1em;
+    width:auto;
+   
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 499;
+    transition:all .5s ease-in-out;
+   }
+ .sbtn:hover{
+     border:2px solid rgb(190,226,242);
+     background: black;
+     color:#ef7998;
+   }
+.about-img{
+ 
+  position: relative;
+  width: 100%;
+  height: 20em;
+  background: white;
+display:flex;
+  justify-content: center;
+  align-items: center;
+
+ 
+}
+.sub-img-cont{
+ position:absolute;
+  border: 7px solid rgb(249, 228, 148);
+  width: 64%;
+  height:64%;
+  transform: translate(-10%,-10%);
+  transition: all 1.2s ease-in-out;
+  margin:0;
+  padding: 0;
+}
+#dimg{
+  width: 75%;
+  height:75%;
+  position: absolute;
+ background-image: url("img/sweets-1.jpeg");
+background-size: 85.5% 86%;
+background-repeat: no-repeat;
+  margin-left: 20%;
+  margin-top:10%;
+}
+.banner{
+
+
+  width:100%;
+  height: 100vh;
+}
+.bimg{
+  
+
+ position:relative;
+  
+  height: 100vh;
+  background:linear-gradient(rgba(249, 228, 148, 0.5),rgba(249, 228, 148,0.5)),url("img/headerBcg.jpeg") center/cover fixed no-repeat;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.bimg p{
+  position:absolute;
+ 
+ 
+}
+.bimg .p1{
+  font-size: 2.6em;
+  margin-top:-3em;
+  color:white;
+  font-weight: 70;
+  text-align: center;
+}
+.bimg .p2{
+  color:  #ef7998;
+  
+  font-size: 4rem;
+ 
+  font-weight:1000;
+  
+  
+}
+.usbtn{
+  
+  text-transform: uppercase;
+font-family: "Kaushan Script", cursive;
+    background: transparent;
+    color: black;
+    border-radius: 3px;
+    border:.12em solid black;
+  margin-top:4em;
+  width:6em;
+  height: 2.3em;
+ 
+    font-size: 1.5em;
+    font-weight: 433;
+
+    transition:all .5s ease-in-out;
+   
+   }
+ .usbtn:hover{
+     border:.3rem solid rgba(174,219,226,0.7);
+     background: black;
+     color:  #ef7998;
+   }
+#cart-btn{
+  width: 2.7em;
+  height: 2.7em;
+  bottom:1.5em;
+   right:1em;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+   position: fixed;
+   z-index: 99;
+      background: #ef7998;
+     border-radius: 50%;
+     font-size:1.3em;
+     box-sizing: border-box;
+      transition:all .4s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0) 0px 5px 15px;
+    opacity:0;
+  transform: scale(0);
+   
+ }
+ #cart-btn p{
+   margin-top:-.5em;
+  display:none;
+ }
+ #cart-btn i{
+  
+   color:white;
+   margin-left:-.1em;
+ 
+ }
+ .cart-bg{
+  padding-top:3em;
+   width: 100%;
+  z-index: -1;
+display: flex;
+flex-direction: column;
+align-items:  center;
+row-gap: 1em;
+  position: fixed;
+  height:100%;
+   top:0em;
+   left:0;
+   opacity:0;
+   background:rgb(237,231,209);
+   transition: all .5s ease-in-out;
+ }
+ .sbgi{
+   color: #ef7998;
+   margin-top:-1em;
+   width: 100%;
+   min-height:5em;
+   max-height: 30em;  
+   border-color:green;
+   overflow:  auto;
+   display:flex;
+   flex-direction: column;
+   justify-content:space-between;
+   align-items: center;
+   row-gap: .7em;
+   
+ }
+ .cart-items{
+   width: 100%;
+   height:auto;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+  
+  
+ }
+ .prc{
+   font-weight: 444;
+ }
+ .cart-items .np{
+   color: black;
+ }
+ .cart-items img{
+   width:3.5em;
+   height:3.5em;
+   border-radius: 50%;
+ }
+ .cart-items i{
+   font-size: 1em;
+ }
+ .cart-bg span{
+   color:white;
+font-size:2.5em;
+align-self: flex-end;
+margin-right: .5em;
+margin-top:-1.5em;
+ }
+ .cc{
+   width:100%;
+margin-top:-.5em;
+   display:flex;
+   display:none;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+  
+   row-gap: 1.5em;
+ }
+ #tt{
+   font-weight: 666;
+ }
+ .cc div{
+   width:100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+ }
+ .cc button{
+   font-family:"Kaushan Script", cursive;
+   font-size:1em;
+   font-weight: 444;
+   padding:.6em;
+   background:pink;
+   border:1.5px solid black;
+   border-radius:5px;
+ }
+ .cc button:nth-child(1){
+   background:none ;
+ }
+.cc button:nth-child(2){
+ color:#ef7998;
+ background: none;
+ border:2px solid  #ef7998;
+ transition:all .5s ease-in-out;
+ }
+ /*
+.cc button:nth-child(2):hover {
+border:3px solid  white;
+color: black;
+   background:#ef7998;
+   
+ }*/
+   .nav{
+     background:white;
+     width:100%;
+     height:5.5em;
+     position:relative;
+    transition:all .2s ease-in-out;
+    
+   }
+   .nav-btn{
+     position: absolute;
+     font-size:2.8em;
+     right:.9em;
+     top:.40em;
+     color:#ef7998;
+   }
+   .nav ul{
+    
+     top:4em;
+     position:absolute;
+     list-style: none;
+    margin-top:-.5em;
+     font-size: 1.6em;
+     font-weight:444;
+    padding-left: 1em;
+     display: none;
+     box-sizing: border-box;
+width: 100%;
+   }
+.nav ul li{
+
+  color:  #ef7998;
+  padding-bottom:.7em;
+  transition:all .4s ease-in-out;
+
+}
+.nav ul li:hover{
+  color:black;
+  font-size:1.61em;
+}
+.logo{
+  position: absolute;
+  width: 5em;
+  height:5em;
+  background: url("img/logo.svg") no-repeat;
+  top:1em;
+  left:1.5em;
+}
+.cone{
+  background: rgba(0,0,0,0.8);
+  top:0;
+  left:0;
+  margin:0;
+  padding:0;
+  width: 100%;
+  height:100%;
+  position:fixed;
+  z-index: 100;
+  display:none;
+  transition:all 1s ease-in-out;
+  
+}
+.pop-img{
+  border-radius: 4px;
+  width:80%;
+  height: 100%;
+ 
+}
+.cone span{
+ font-size: 2.5em;
+ color: #ef7998;
+ margin-left: 84%;
+ transition:all .3s ease-in-out;
+}
+.cone span:hover {
+  color:rgb(249, 228, 148);
+ 
+}
+  .sldngimg{
+    
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    width:100%;
+    height:80%;
+    object-fit: cover;
+  }
+  .sldngimg div{
+    margin-top:60%;
+    width:100%;
+    height:100%;
+    font-size: 4em;
+    color:  #ef7998;
+    font-family: none;
+    margin-left:0.1em;
+    transition:all .5s ease-in-out;
+  }
+  .sldngimg div:hover{
+    
+      color:rgb(249, 228, 148);
+      
+  }
+ @media screen and (min-width:720px){
+   body{
+   
+     background-size: 100vh 100vh;
+   }
+   #dimg{
+     
+   }
+   .about-txt{
+     
+     margin-top:-2.5em;
+   }
+   .about-txt h1{
+   
+     font-size: 3em;
+   margin-left:-.3em;
+     font-weight:999;
+     color: black;
+   }
+   .abusp{
+     width: 20em;
+     overflow-wrap: break-word;
+     margin-left:2em;
+   }
+   .about-txt p{
+     margin-left:2.6em;
+     font-size: 1em;
+   
+   }
+   .sbtn{
+     margin-left:-5em;
+   }
+   
+   
+   
+   .about-txt{
+     width:50%;
+     height: 30em;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+   }
+   
+   .about-img{
+     width:49.2%;
+     height:30em;
+   }
+   
+   
+ }
+
+  </style>
+  <body>
+    
+  <div id="cart-btn" type="submit">
+    
+   <i class='fa fa-shopping-cart cart'></i>
+   
+  </div>
+    <div class="nav" id="nv">
+  <a id="lnk" href="Sample.html">
+      <div class="logo">
+      
+      </div>
+    </a>
+        <i id="nb" class="fa fa-navicon nav-btn"></i>
+      
+      <ul id="ml">
+        
+      <li>Home</li>  
+      <li>About</li>
+      <li>Store</li>
+      
+      </ul>
+    </div>
+    
+    <div class="banner">
+      
+      <div class="bimg">
+       <p class="p1">
+        Welcome To <span class="p2">
+         Grandma's
+       </span>
+       </p>
+       
+       
+  <button class="usbtn" type="submit">Explore</button>
+      </div>
+      
+    </div>
+    <section class="sec2">
+      <div class="about-us">
+        <div class="about-txt">
+          <h1 class="">About</h1>
+          
+       <div class="abusp">
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aliquam voluptas beatae vitae expedita consectetur nesciunt quia deserunt asperiores facere fuga dicta fugiat corrupti et omnis porro at dolorum! Ad!
+          </p>
+       </div>
+          <button class="sbtn" type="submit">Explore</button>
+        </div>
+        <div class="about-img">
+          <div id="sic" class="sub-img-cont">
+          
+          </div>
+             <div id="dimg"></div>
+        </div>
+      </div>
+    </section>
+    
+   <div class="sec3">
+    
+    <div class="pbs">
+      
+      <p>Our</p>
+      
+      <div class="vbtn" id="kl"> 
+      
+  <button id="all">ALL</button>
+  <button id="cakes">CAKES</button>
+  <button id="cpcks">CUPCAKES</button>
+  <button id="swts">SWEETS</button>
+  <button id="dhnts">DOUGHNUTS</button>
+  
+      </div>
+      <div class="sicon">
+        
+        <i class="fa fa-search"></i>
+        
+       <input placeholder="Item...." type="text" name="sbox" id="sbox" value="" />
+        
+      </div>
+      
+    </div>
+    
+    
+   <div id="container">
+   
+ </div>
+ 
+</div>
+
+  <div class="cone">
+    
+   <span>&times;</span>
+   
+   <div class="sldngimg">
+     
+   <div id="lft-btn">
+     <i  class="fa fa-caret-left"></i>
+   </div>
+   
+    <img class="pop-img" src="img/cake-1.jpeg" alt="" />
+    
+ <div id="rght-btn" >
+    <i class="fa fa-caret-right"></i>
+   
+ </div>
+ 
+ </div>
+  </div>
+  <div class="cart-bg">
+  <span>&times;</span>
+  <div class="sbgi"><p id="nia">No Items Added</p></div>
+ <div class="cc">
+   <div>
+   <p id="tt">Total</p>
+   <p id="tbill">$ 68.89</p>
+   </div>
+   <div>
+   <button class="clr" type="submit">CLEAR CART</button>
+ <button class="chkout" type="submit">CHECKOUT</button>
+ </div>
+ </div>
+  </div>
+  </body>
+  
+ <script>
+ var mon=1;
+var val=1;
+var indx=0;
+var img_obj=[];
+var h=0;
+var c=1;
+var tbill=0;
+var kol=0;
+var vog=0;
+
+document.querySelector(".usbtn").onclick=function(){
+window.scrollTo({
+  
+  top:800,
+  left:0,
+  behavior:'smooth'
+})
+}
+
+document.querySelector(".sbtn").onclick=function(){
+window.scrollTo({
+  
+  top:900,
+  left:0,
+  behavior:'smooth'
+})
+}
+
+window.onscroll=function (){
+  //console.log(document.documentElement.scrollTop)
+  if(document.documentElement.scrollTop>925){
+    
+    document.querySelector("#cart-btn").style.transform="scale(1)";
+document.querySelector("#cart-btn").style.opacity="1";
+    
+  }
+  else{
+  document.querySelector("#cart-btn").style.transform="scale(0)";
+document.querySelector("#cart-btn").style.opacity="0";
+    
+  }
+}
+
+/*function createPopUp(){
+
+document.querySelectorAll(".img-cont img").forEach(function(e){
+  
+  e.setAttribute("id",`${indx}`);
+  
+img_obj.push(e.getAttribute("src"));
+
+  e.onclick=function (){
+   var h=Number(e.getAttribute("id"));
+   
+document.querySelector(".cone").style.display="block";
+document.querySelector(".cone img").src=e.getAttribute("src");
+
+//right button
+document.querySelector("#rght-btn").onclick=function (){
+  
+  h++;
+  if(h>11){
+    h=0;
+  }
+
+document.querySelector(".cone img").src=img_obj[h];
+ }
+//left button
+document.querySelector("#lft-btn").onclick=function (){
+  
+  h--;
+  if(h<0){
+    h=11;
+  }
+
+document.querySelector(".cone img").src=img_obj[h];
+ }
+}
+
+indx++;
+ })
+ 
+ }
+ */
+//image details record 
+const lst=[
+  {
+    id:"mc12",
+    isrc:"sweets-1.jpeg",
+    name:"Sweet Item",
+    price:'5.69',
+  },
+  
+  {
+    id:"mc1",
+    isrc:"cupcake-3.jpeg",
+    name:"Cupcake Item",
+    price:'5',
+  },
+  
+  {
+    id:"mc2",
+    isrc:"cake-1.jpeg",
+    name:"Cake Item",
+    price:'5',
+  },
+  {
+    id:"mc3",
+    isrc:"cake-3.jpeg",
+    name:"Cake Item",
+    price:'10.79',
+  },
+  {
+    id:"mc4",
+    isrc:"cake-2.jpeg",
+    name:"Cake Item",
+    price:'15.99',
+},
+  {
+    id:"mc5",
+    isrc:"cupcake-1.jpeg",
+    name:"Cupcake Item",
+    price:'10',
+  },
+  {
+    id:"mc6",
+    isrc:"cupcake-2.jpeg",
+    name:"Cupcake Item",
+    price:'10',
+  },
+  {
+    id:"mc10",
+    isrc:"sweets-3.jpeg",
+    name:"Sweet Item",
+    price:'15',
+  },
+  
+  {
+    id:"mc7",
+    isrc:"doughnut-3.jpeg",
+    name:"Doughnut Item",
+    price:'15',
+  },
+  {
+    id:"mc8",
+    isrc:"doughnut-1.jpeg",
+    name:"Doughnut Item",
+    price:'15',
+  },
+  {
+    id:"mc9",
+    isrc:"doughnut-2.jpeg",
+    name:"Doughnut Item",
+    price:'10',
+  },
+  {
+    id:"mc11",
+    isrc:"sweets-2.jpeg",
+    name:"Sweet Item",
+    price:'15',
+  },
+  
+  
+  ]
+ document.querySelector(".cart-bg span").onclick=function(){
+//console.log("Cross ",tbill)
+
+document.querySelectorAll(".cart-items").forEach(function(e){
+  
+e.children[2].onclick=null;
+  
+});
+
+
+document.querySelector(".cart-bg").style.zIndex="-1";
+document.querySelector(".cart-bg").style.opacity="0";
+
+ }
+ 
+lst.forEach((data)=>{
+         document.querySelector("#container").insertAdjacentHTML("afterbegin",`
+  <div class="mc" id=${data.id}>
+   <div class="img-cont">
+<img class="con" src="img/${data.isrc}" />
+  <div class="bicon">
+   <i class='fa fa-shopping-cart cart'></i>
+   </div>
+   </div>
+   
+   <div class="prb">
+   <p>${data.name}</p>
+   <p>$ ${data.price}</p>
+   </div>
+ </div>
+ 
+ `)
+ 
+document.querySelector(".bicon").addEventListener("click",function (){
+ kol++;
+ alert(`Item Added To Cart!\n${data.name} `);
+
+  document.querySelector(".sbgi").insertAdjacentHTML("beforeend",`
+  <div class=cart-items id=kol${kol}>
+  <img src=img/${data.isrc}>
+  <div class=np>
+  <h4>${data.name}</h4>
+  
+<h5>$ <strong class=prc>${data.price}</strong></h5>
+</div>
+<div class=itm id=del${kol}>
+  <i class='fa fa-trash' ></i>
+    
+</div>
+</div>
+  `);
+
+ // document.querySelector(`#kol${kol}`).setAttribute("id",`item${kol}`)
+ /*
+  document.querySelector(`#del${kol}`).addEventListener("click",function(){
+    console.log("hello")
+console.log(document.querySelector(`.itm`).getAttribute("id"));
+document.querySelector(`#kol${kol}`).remove();
+  })
+  */
+  
+  tbill+=Number(data.price);
+document.querySelector("#tbill").innerHTML=`$ ${Number(tbill).toFixed(2)}`;
+
+
+if(document.querySelector(".sbgi").children.length>1){
+   document.querySelector("#nia").style.display="none";
+   document.querySelector(".cc").style.display="flex";
+ }
+ 
+
+});
+
+
+
+});
+
+
+
+document.querySelector("input").addEventListener("keyup", function (){
+  
+  iv=document.querySelector('input').value.toLowerCase();
+ 
+ document.querySelectorAll("#container .mc").forEach(function (e){
+   
+   if(e.querySelector(".prb p").innerText.toLowerCase().startsWith(iv)){
+     e.style.display="flex";
+   }
+   else{
+   e.style.display="none";
+   }
+ })
+
+});
+document.querySelector("#kl :nth-child(1)").addEventListener("click", function (){
+  
+ 
+ document.querySelectorAll("#container .mc").forEach(function (e){
+   
+     e.style.display="flex";
+
+ });
+
+});
+
+document.querySelector("#kl :nth-child(2)").addEventListener("click", function (){
+  
+  iv="cake item";
+ 
+ document.querySelectorAll("#container .mc").forEach(function (e){
+   
+   if(e.querySelector(".prb p").innerText.toLowerCase().startsWith(iv)){
+     e.style.display="flex";
+   }
+   else{
+   e.style.display="none";
+   }
+ })
+
+});
+
+document.querySelector("#kl :nth-child(3)").addEventListener("click", function (){
+  
+  iv="cupcake item";
+ 
+ document.querySelectorAll("#container .mc").forEach(function (e){
+   
+   if(e.querySelector(".prb p").innerText.toLowerCase().startsWith(iv)){
+     e.style.display="flex";
+   }
+   else{
+   e.style.display="none";
+   }
+ })
+
+});
+
+document.querySelector("#kl :nth-child(4)").addEventListener("click", function (){
+  
+  iv="sweet item";
+ 
+ document.querySelectorAll("#container .mc").forEach(function (e){
+   
+   if(e.querySelector(".prb p").innerText.toLowerCase().startsWith(iv)){
+     e.style.display="flex";
+   }
+   else{
+   e.style.display="none";
+   }
+ })
+
+});
+
+
+document.querySelector("#kl :nth-child(5)").addEventListener("click", function (){
+  
+  iv="doughnut item";
+ 
+ document.querySelectorAll("#container .mc").forEach(function (e){
+   
+   if(e.querySelector(".prb p").innerText.toLowerCase().startsWith(iv)){
+     e.style.display="flex";
+   }
+   else{
+   e.style.display="none";
+   }
+ })
+
+});
+
+document.querySelector("#cart-btn").onclick=function(){
+
+
+
+  document.querySelectorAll(".cart-items").forEach(function(e){
+    
+e.children[2].onclick=function(){
+  // console.log(e.children[2].getAttribute("id"));
+   
+e.remove();
+//console.log(document.querySelector(".sbgi").children.length)
+
+tbill=tbill-Number(e.children[1]. lastElementChild.innerText.slice(2));
+
+document.querySelector("#tbill").innerText=`$ ${tbill.toFixed(2)}`;
+   
+if(document.querySelector(".sbgi").children.length<2){
+  
+document.querySelector(".sbgi").innerHTML="<p id=nia>No Items Added</p>";
+document.querySelector(".cc").style.display="none";
+
+}
+
+
+// end of del btn
+};
+
+// end of forEach of cart items
+});
+
+
+ //console.log("before value ",tbill)
+/*tbill=tbill-Number(e.children[1]. lastElementChild.innerText.slice(2));
+
+document.querySelector("#tbill").innerText=`$ ${tbill.toFixed(2)}`;
+console.log("after value ",tbill)
+*/
+
+  if(c==1){
+document.querySelector(".cart-bg").style.zIndex="100";
+  document.querySelector(".cart-bg").style.opacity="1";
+  
+  }
+  //end of cart btn 
+};
+
+document.querySelector(".clr").onclick=function (){
+
+  document.querySelector(".sbgi").innerHTML=null;
+  
+  
+  tbill=0;
+document.querySelector(".sbgi").innerHTML="<p id=nia>No Items Added</p>";
+document.querySelector(".cc").style.display="none";
+
+
+}
+
+//createPopUp();
+
+//pop up image cancel button 
+document.querySelector(".cone span").onclick=function(){
+  
+  document.querySelector(".cone").style.display="none";
+}  
+/*
+document.querySelector("#sbox").onkeyup=function(event){
+      document.querySelector("#container").innerHTML="";
+      usrdata = event.target.value;
+      
+      arr= lst.filter((g)=>{
+    
+    
+        return g.name.toLowerCase().startsWith(usrdata.toLowerCase());
+    
+    });
+      
+      arr.forEach((data)=>{
+         document.querySelector("#container").insertAdjacentHTML("afterbegin",`
+  <div class="mc" id=${data.id}>
+   <div class="img-cont">
+<img class="con" src="img/${data.isrc}" />
+  <div class="bicon">
+   <i class='fa fa-shopping-cart cart'></i>
+   </div>
+   </div>
+   <div class="prb">
+   <p>${data.name}</p>
+   <p>${data.price}</p>
+   </div>
+ </div>
+ `)});
+ createPopUp();
+  arr=[];
+    }
+
+//five buttons
+
+document.querySelector("#all").onclick=function (){
+  
+document.querySelector("#container").innerHTML=null;
+
+lst.forEach((data)=>{
+ 
+         document.querySelector("#container").insertAdjacentHTML("afterbegin",`
+  <div class="mc" id=${data.id}>
+   <div class="img-cont">
+<img class="con" src="img/${data.isrc}" />
+  <div class="bicon">
+   <i class='fa fa-shopping-cart cart'></i>
+   </div>
+   </div>
+   
+   <div class="prb">
+   <p>${data.name}</p>
+   <p>${data.price}</p>
+   </div>
+ </div>
+ 
+ `)
+ 
+});
+  
+createPopUp();
+
+}
+
+document.querySelector("#cakes").onclick=function(){
+ 
+document.querySelector("#container").innerHTML=null;
+
+ temp_lst=lst.filter((e)=>{return e.name.startsWith("Cake") });
+ 
+ temp_lst.forEach((data)=>{
+
+         document.querySelector("#container").insertAdjacentHTML("afterbegin",`
+  <div class="mc" id=${data.id}>
+   <div class="img-cont">
+<img class="con" src="img/${data.isrc}" />
+  <div class="bicon">
+   <i class='fa fa-shopping-cart cart'></i>
+   </div>
+   </div>
+   
+   <div class="prb">
+   <p>${data.name}</p>
+   <p>${data.price}</p>
+   </div>
+ </div>
+ `)
+});
+
+createPopUp();
+  
+}
+
+
+document.querySelector("#cpcks").onclick=function(){
+document.querySelector("#container").innerHTML=null;
+
+ temp_lst=lst.filter((e)=>{return e.name.startsWith("Cupcake") });
+ 
+ temp_lst.forEach((data)=>{
+ 
+         document.querySelector("#container").insertAdjacentHTML("afterbegin",`
+  <div class="mc" id=${data.id}>
+   <div class="img-cont">
+<img class="con" src="img/${data.isrc}" />
+  <div class="bicon">
+   <i class='fa fa-shopping-cart cart'></i>
+   </div>
+   </div>
+   
+   <div class="prb">
+   <p>${data.name}</p>
+   <p>${data.price}</p>
+   </div>
+ </div>
+ `)
+});
+ createPopUp();
+  
+}
+
+document.querySelector("#swts").onclick=function(){
+document.querySelector("#container").innerHTML=null;
+
+ temp_lst=lst.filter((e)=>{return e.name.startsWith("Sweet") });
+ 
+ temp_lst.forEach((data)=>{
+ 
+         document.querySelector("#container").insertAdjacentHTML("afterbegin",`
+  <div class="mc" id=${data.id}>
+   <div class="img-cont">
+<img class="con" src="img/${data.isrc}" />
+  <div class="bicon">
+   <i class='fa fa-shopping-cart cart'></i>
+   </div>
+   </div>
+   
+   <div class="prb">
+   <p>${data.name}</p>
+   <p>${data.price}</p>
+   </div>
+ </div>
+ `)
+});
+createPopUp();
+}
+
+document.querySelector("#dhnts").onclick=function(){
+document.querySelector("#container").innerHTML=null;
+
+ temp_lst=lst.filter((e)=>{return e.name.startsWith("Doughnut") });
+ 
+ temp_lst.forEach((data)=>{
+ 
+         document.querySelector("#container").insertAdjacentHTML("afterbegin",`
+  <div class="mc" id=${data.id}>
+   <div class="img-cont">
+<img class="con" src="img/${data.isrc}" />
+  <div class="bicon">
+   <i class='fa fa-shopping-cart cart'></i>
+   </div>
+   </div>
+   
+   <div class="prb">
+   <p>${data.name}</p>
+   <p>${data.price}</p>
+   </div>
+ </div>
+ `)
+});
+createPopUp();
+}
+//end of five buttons
+*/
+
+document.getElementById("dimg").addEventListener("mouseover",function(){
+  
+ document.getElementById("sic").style.transform="translate(6.59%,.2%)";
+});
+
+document.getElementById("dimg").addEventListener("mouseout",function(){
+ 
+ document.getElementById("sic").style.transform="translate(-10%,-10%)";
+ 
+});
+
+document.getElementById("nb").addEventListener("click", function(){
+  
+  document.getElementById("ml").style.display="block";
+  
+  if(val==1){
+    
+  document.getElementById("nv").style.height="17em";
+  
+  val=0;
+  
+  }else{
+    
+document.getElementById("nv").style.height="5.5em";
+val=1;
+  }
+});
+  </script>
+</html>
